@@ -11,7 +11,6 @@ Unlike traditional Neovim colorschemes that use hardcoded hex colors, Pixel.nvim
 - **Dynamic Color Adaptation**: Automatically uses your terminal's color palette
 - **No Hardcoded Colors**: Uses only ANSI color codes 0-15
 - **Terminal Agnostic**: Works with any terminal emulator (Alacritty, iTerm2, Kitty, etc.)
-- **Bat-Compatible**: Uses the same ANSI color mapping as the bat tool
 - **Lightweight**: Minimal overhead with no GUI color definitions
 - **Consistent**: Your Neovim theme will always match your terminal aesthetic
 
