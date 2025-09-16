@@ -159,6 +159,15 @@ function M.setup()
   require("pixel.telescope").setup(colors)
   require("pixel.nvim_tree").setup(colors)
   require("pixel.neo_tree").setup(colors)
+
+  -- Load additional common plugin modules
+  require("pixel.gitsigns").setup(colors)
+  require("pixel.mason").setup(colors)
+  require("pixel.trouble").setup(colors)
+  require("pixel.indent_blankline").setup(colors)
+  require("pixel.flash").setup(colors)
+  require("pixel.noice").setup(colors)
+  require("pixel.whichkey").setup(colors)
 end
 
 -- Export colors for use in other modules

@@ -1,5 +1,5 @@
 -- Treesitter support for Pixel colorscheme
--- This module provides Treesitter highlight groups
+-- This module provides Treesitter-related highlight groups
 
 local M = {}
 
@@ -23,54 +23,121 @@ local function hi(group, opts)
 end
 
 function M.setup(colors)
+  -- Treesitter highlights
+  hi("@annotation", { ctermfg = colors.blue })
+  hi("@attribute", { ctermfg = colors.blue })
+  hi("@boolean", { ctermfg = colors.red })
+  hi("@character", { ctermfg = colors.green })
+  hi("@character.special", { ctermfg = colors.br_green })
 
-  -- LSP semantic highlighting - treesitter
+  -- Comments
+  hi("@comment", { ctermfg = colors.br_black, cterm = "italic" })
+  hi("@comment.documentation", { ctermfg = colors.br_black, cterm = "italic" })
+
+  -- Control flow
+  hi("@conditional", { ctermfg = colors.blue, cterm = "bold" })
+  hi("@repeat", { ctermfg = colors.blue, cterm = "bold" })
+  hi("@exception", { ctermfg = colors.blue })
+  hi("@keyword", { ctermfg = colors.blue })
+  hi("@keyword.function", { ctermfg = colors.blue })
+  hi("@keyword.operator", { ctermfg = colors.blue })
+  hi("@keyword.return", { ctermfg = colors.blue })
+
+  -- Constants and variables
+  hi("@constant", { ctermfg = colors.magenta })
+  hi("@constant.builtin", { ctermfg = colors.magenta })
+  hi("@constant.macro", { ctermfg = colors.magenta })
   hi("@variable", { ctermfg = colors.white })
-  hi("@variable.builtin", { ctermfg = colors.magenta, cterm = "italic" })
-  hi("@variable.parameter", { ctermfg = colors.white, cterm = "italic" })
-  hi("@constant", { ctermfg = colors.magenta, cterm = "bold" })
-  hi("@constant.builtin", { ctermfg = colors.magenta, cterm = "bold,italic" })
-  hi("@constant.macro", { ctermfg = colors.br_magenta, cterm = "bold" })
+  hi("@variable.builtin", { ctermfg = colors.yellow })
+  hi("@parameter", { ctermfg = colors.white })
+  hi("@parameter.reference", { ctermfg = colors.white })
+
+  -- Functions and methods
+  hi("@function", { ctermfg = colors.red })
+  hi("@function.builtin", { ctermfg = colors.red, cterm = "bold" })
+  hi("@function.call", { ctermfg = colors.red })
+  hi("@function.macro", { ctermfg = colors.red, cterm = "bold" })
+  hi("@method", { ctermfg = colors.red })
+  hi("@method.call", { ctermfg = colors.red })
+  hi("@constructor", { ctermfg = colors.yellow })
+
+  -- Types and structures
+  hi("@type", { ctermfg = colors.yellow })
+  hi("@type.builtin", { ctermfg = colors.yellow })
+  hi("@type.definition", { ctermfg = colors.yellow })
+  hi("@type.qualifier", { ctermfg = colors.blue })
+  hi("@namespace", { ctermfg = colors.yellow })
+  hi("@storageclass", { ctermfg = colors.blue })
+
+  -- Properties and fields
+  hi("@property", { ctermfg = colors.cyan })
+  hi("@field", { ctermfg = colors.cyan })
+
+  -- Strings and numbers
   hi("@string", { ctermfg = colors.green })
   hi("@string.escape", { ctermfg = colors.br_green, cterm = "bold" })
-  hi("@string.special", { ctermfg = colors.cyan })
-  hi("@character", { ctermfg = colors.br_green })
+  hi("@string.regex", { ctermfg = colors.green })
+  hi("@string.special", { ctermfg = colors.br_green })
   hi("@number", { ctermfg = colors.cyan })
-  hi("@boolean", { ctermfg = colors.red, cterm = "bold" })
   hi("@float", { ctermfg = colors.cyan })
-  hi("@function", { ctermfg = colors.red, cterm = "bold" })
-  hi("@function.builtin", { ctermfg = colors.red, cterm = "bold,italic" })
-  hi("@function.macro", { ctermfg = colors.br_red, cterm = "bold" })
-  hi("@method", { ctermfg = colors.red })
-  hi("@constructor", { ctermfg = colors.yellow, cterm = "bold" })
-  hi("@parameter", { ctermfg = colors.white, cterm = "italic" })
-  hi("@keyword", { ctermfg = colors.blue, cterm = "bold" })
-  hi("@keyword.function", { ctermfg = colors.blue, cterm = "italic" })
-  hi("@keyword.operator", { ctermfg = colors.blue })
-  hi("@keyword.return", { ctermfg = colors.blue, cterm = "bold" })
-  hi("@conditional", { ctermfg = colors.blue })
-  hi("@repeat", { ctermfg = colors.blue })
-  hi("@label", { ctermfg = colors.blue })
+
+  -- Operators and punctuation
   hi("@operator", { ctermfg = colors.white })
-  hi("@exception", { ctermfg = colors.red, cterm = "bold" })
-  hi("@type", { ctermfg = colors.yellow, cterm = "bold" })
-  hi("@type.builtin", { ctermfg = colors.yellow, cterm = "bold,italic" })
-  hi("@type.definition", { ctermfg = colors.yellow })
-  hi("@storageclass", { ctermfg = colors.yellow })
-  hi("@structure", { ctermfg = colors.yellow })
-  hi("@namespace", { ctermfg = colors.yellow, cterm = "italic" })
-  hi("@include", { ctermfg = colors.br_magenta, cterm = "bold" })
-  hi("@preproc", { ctermfg = colors.br_magenta })
+  hi("@punctuation.bracket", { ctermfg = colors.white })
+  hi("@punctuation.delimiter", { ctermfg = colors.white })
+  hi("@punctuation.special", { ctermfg = colors.br_green })
+
+  -- Special elements
+  hi("@symbol", { ctermfg = colors.magenta })
+  hi("@label", { ctermfg = colors.yellow })
+  hi("@include", { ctermfg = colors.blue, cterm = "italic" })
+  hi("@define", { ctermfg = colors.blue })
   hi("@debug", { ctermfg = colors.br_red })
-  hi("@tag", { ctermfg = colors.red })
+  hi("@error", { ctermfg = colors.br_red })
+
+  -- Tags (HTML/XML)
+  hi("@tag", { ctermfg = colors.blue })
   hi("@tag.attribute", { ctermfg = colors.cyan })
   hi("@tag.delimiter", { ctermfg = colors.white })
-  hi("@comment", { ctermfg = colors.br_black, cterm = "italic" })
-  hi("@comment.documentation", { ctermfg = colors.br_yellow, cterm = "italic" })
 
-  -- Treesitter context
-  hi("TreesitterContext", { ctermbg = colors.br_black })
-  hi("TreesitterContextLineNumber", { ctermfg = colors.white, cterm = "bold" })
+  -- Text elements (Markdown, etc.)
+  hi("@text", { ctermfg = colors.white })
+  hi("@text.strong", { ctermfg = colors.white, cterm = "bold" })
+  hi("@text.emphasis", { ctermfg = colors.white, cterm = "italic" })
+  hi("@text.underline", { ctermfg = colors.white, cterm = "underline" })
+  hi("@text.strike", { ctermfg = colors.white, cterm = "strikethrough" })
+  hi("@text.title", { ctermfg = colors.blue, cterm = "bold" })
+  hi("@text.literal", { ctermfg = colors.green })
+  hi("@text.uri", { ctermfg = colors.br_green, cterm = "underline" })
+  hi("@text.math", { ctermfg = colors.cyan })
+  hi("@text.environment", { ctermfg = colors.blue })
+  hi("@text.environment.name", { ctermfg = colors.yellow })
+  hi("@text.reference", { ctermfg = colors.cyan })
+  hi("@text.todo", { ctermfg = colors.br_black, cterm = "bold" })
+  hi("@text.note", { ctermfg = colors.br_blue, cterm = "bold" })
+  hi("@text.warning", { ctermfg = colors.br_yellow, cterm = "bold" })
+  hi("@text.danger", { ctermfg = colors.br_red, cterm = "bold" })
+
+  -- Language-specific highlights
+  hi("@variable.builtin.vim", { ctermfg = colors.yellow })
+  hi("@function.builtin.vim", { ctermfg = colors.red })
+
+  -- HTML
+  hi("@tag.html", { ctermfg = colors.blue })
+  hi("@tag.delimiter.html", { ctermfg = colors.white })
+  hi("@tag.attribute.html", { ctermfg = colors.cyan })
+
+  -- CSS
+  hi("@property.css", { ctermfg = colors.cyan })
+  hi("@type.css", { ctermfg = colors.blue })
+  hi("@string.css", { ctermfg = colors.green })
+  hi("@number.css", { ctermfg = colors.cyan })
+
+  -- JavaScript/TypeScript
+  hi("@constructor.javascript", { ctermfg = colors.yellow })
+  hi("@constructor.typescript", { ctermfg = colors.yellow })
+  hi("@variable.builtin.javascript", { ctermfg = colors.yellow })
+  hi("@variable.builtin.typescript", { ctermfg = colors.yellow })
 end
 
 return M

@@ -1,0 +1,98 @@
+-- Diffview.nvim highlights for Pixel colorscheme
+local M = {}
+
+-- Helper function to set highlight groups
+local function hi(group, opts)
+  local cmd = "highlight " .. group
+
+  if opts.ctermfg then
+    cmd = cmd .. " ctermfg=" .. opts.ctermfg
+  end
+
+  if opts.ctermbg then
+    cmd = cmd .. " ctermbg=" .. opts.ctermbg
+  end
+
+  if opts.cterm then
+    cmd = cmd .. " cterm=" .. opts.cterm
+  end
+
+  vim.cmd(cmd)
+end
+
+function M.setup(colors)
+	-- Diffview panel
+	hi("DiffviewNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("DiffviewCursorLine", { ctermbg = colors.br_black })
+	hi("DiffviewVertSplit", { ctermfg = colors.br_black })
+	hi("DiffviewSignColumn", { ctermbg = colors.black })
+	hi("DiffviewStatusLine", { ctermfg = colors.white, ctermbg = colors.br_black })
+	hi("DiffviewStatusLineNC", { ctermfg = colors.br_black, ctermbg = colors.br_black })
+	hi("DiffviewEndOfBuffer", { ctermfg = colors.black })
+	hi("DiffviewFilePanelTitle", { ctermfg = colors.red, cterm = "bold" })
+	hi("DiffviewFilePanelCounter", { ctermfg = colors.cyan, cterm = "bold" })
+	hi("DiffviewFilePanelFileName", { ctermfg = colors.green })
+	hi("DiffviewFilePanelPath", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelInsertions", { ctermfg = colors.green })
+	hi("DiffviewFilePanelDeletions", { ctermfg = colors.red })
+	hi("DiffviewFilePanelRootPath", { ctermfg = colors.yellow, cterm = "bold" })
+	hi("DiffviewFilePanelSelected", { ctermfg = colors.red, cterm = "bold" })
+	hi("DiffviewFilePanelConflicts", { ctermfg = colors.br_red })
+	hi("DiffviewReference", { ctermfg = colors.cyan })
+	hi("DiffviewPrimary", { ctermfg = colors.red })
+	hi("DiffviewSecondary", { ctermfg = colors.cyan })
+	hi("DiffviewDim1", { ctermfg = colors.br_black })
+	hi("DiffviewFolderName", { ctermfg = colors.yellow })
+	hi("DiffviewFolderSign", { ctermfg = colors.br_black })
+	hi("DiffviewHash", { ctermfg = colors.br_black })
+	hi("DiffviewStatusAdded", { ctermfg = colors.green })
+	hi("DiffviewStatusUntracked", { ctermfg = colors.green })
+	hi("DiffviewStatusModified", { ctermfg = colors.yellow })
+	hi("DiffviewStatusRenamed", { ctermfg = colors.br_yellow })
+	hi("DiffviewStatusCopied", { ctermfg = colors.br_blue })
+	hi("DiffviewStatusTypeChange", { ctermfg = colors.br_yellow })
+	hi("DiffviewStatusUnmerged", { ctermfg = colors.br_red })
+	hi("DiffviewStatusUnknown", { ctermfg = colors.br_black })
+	hi("DiffviewStatusDeleted", { ctermfg = colors.red })
+	hi("DiffviewStatusBroken", { ctermfg = colors.br_red })
+	hi("DiffviewStatusIgnored", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelStaged", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelUnstaged", { ctermfg = colors.br_yellow })
+	hi("DiffviewFilePanelWorking", { ctermfg = colors.white })
+	hi("DiffviewFilePanelIndex", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelMerging", { ctermfg = colors.br_red })
+	hi("DiffviewFilePanelCommit", { ctermfg = colors.red })
+	hi("DiffviewFilePanelBranch", { ctermfg = colors.cyan })
+	hi("DiffviewFilePanelHead", { ctermfg = colors.red, cterm = "bold" })
+	hi("DiffviewFilePanelUpstream", { ctermfg = colors.yellow })
+	hi("DiffviewFilePanelReadOnly", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelLoadMore", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelLoading", { ctermfg = colors.br_yellow })
+	hi("DiffviewFilePanelEmpty", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelEmptyFolder", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelEmptyMessage", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("DiffviewFilePanelBinary", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelSymlink", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelSubmodule", { ctermfg = colors.yellow })
+	hi("DiffviewFilePanelIgnored", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelClean", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelDirty", { ctermfg = colors.br_yellow })
+	hi("DiffviewFilePanelUnknown", { ctermfg = colors.br_black })
+	hi("DiffviewFilePanelError", { ctermfg = colors.br_red })
+	hi("DiffviewFilePanelWarning", { ctermfg = colors.br_yellow })
+	hi("DiffviewFilePanelInfo", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelHint", { ctermfg = colors.br_cyan })
+	hi("DiffviewFilePanelOk", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelMoved", { ctermfg = colors.cyan })
+	hi("DiffviewFilePanelMoved2", { ctermfg = colors.yellow })
+	hi("DiffviewFilePanelMoved3", { ctermfg = colors.br_yellow })
+	hi("DiffviewFilePanelMoved4", { ctermfg = colors.br_red })
+	hi("DiffviewFilePanelMoved5", { ctermfg = colors.br_blue })
+	hi("DiffviewFilePanelMoved6", { ctermfg = colors.red })
+	hi("DiffviewFilePanelMoved7", { ctermfg = colors.blue })
+	hi("DiffviewFilePanelMoved8", { ctermfg = colors.green })
+	hi("DiffviewFilePanelMoved9", { ctermfg = colors.cyan })
+	hi("DiffviewFilePanelMoved10", { ctermfg = colors.yellow })
+end
+
+return M

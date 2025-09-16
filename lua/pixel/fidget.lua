@@ -1,0 +1,105 @@
+-- Fidget.nvim highlights for Pixel colorscheme
+local M = {}
+
+-- Helper function to set highlight groups
+local function hi(group, opts)
+  local cmd = "highlight " .. group
+
+  if opts.ctermfg then
+    cmd = cmd .. " ctermfg=" .. opts.ctermfg
+  end
+
+  if opts.ctermbg then
+    cmd = cmd .. " ctermbg=" .. opts.ctermbg
+  end
+
+  if opts.cterm then
+    cmd = cmd .. " cterm=" .. opts.cterm
+  end
+
+  vim.cmd(cmd)
+end
+
+function M.setup(colors)
+	-- Fidget progress
+	hi("FidgetProgress", { ctermfg = colors.red })
+	hi("FidgetProgressDone", { ctermfg = colors.br_blue })
+	hi("FidgetProgressTitle", { ctermfg = colors.red, cterm = "bold" })
+	hi("FidgetProgressIcon", { ctermfg = colors.red })
+	hi("FidgetProgressGroup", { ctermfg = colors.cyan })
+	hi("FidgetProgressSubGroup", { ctermfg = colors.yellow })
+	hi("FidgetProgressMessage", { ctermfg = colors.white })
+	hi("FidgetProgressPercent", { ctermfg = colors.cyan })
+	hi("FidgetProgressSpinner", { ctermfg = colors.red })
+	hi("FidgetProgressText", { ctermfg = colors.white })
+	hi("FidgetProgressClient", { ctermfg = colors.cyan })
+	hi("FidgetProgressTodo", { ctermfg = colors.br_yellow })
+	hi("FidgetProgressError", { ctermfg = colors.br_red })
+	hi("FidgetProgressWarn", { ctermfg = colors.br_yellow })
+	hi("FidgetProgressInfo", { ctermfg = colors.br_blue })
+	hi("FidgetProgressHint", { ctermfg = colors.br_cyan })
+	hi("FidgetProgressCancelled", { ctermfg = colors.br_black })
+	hi("FidgetProgressPending", { ctermfg = colors.br_yellow })
+	hi("FidgetProgressRunning", { ctermfg = colors.red })
+	hi("FidgetProgressSuccess", { ctermfg = colors.br_blue })
+	hi("FidgetProgressFailed", { ctermfg = colors.br_red })
+	hi("FidgetProgressSkipped", { ctermfg = colors.br_black })
+	hi("FidgetProgressCanceled", { ctermfg = colors.br_black })
+	hi("FidgetProgressTimeout", { ctermfg = colors.br_red })
+	hi("FidgetProgressUnknown", { ctermfg = colors.br_black })
+	hi("FidgetProgressDefault", { ctermfg = colors.white })
+	hi("FidgetProgressActive", { ctermfg = colors.red, cterm = "bold" })
+	hi("FidgetProgressInactive", { ctermfg = colors.br_black })
+	hi("FidgetProgressQuiet", { ctermfg = colors.br_black })
+	hi("FidgetProgressLoud", { ctermfg = colors.red, cterm = "bold" })
+	hi("FidgetProgressSilent", { ctermfg = colors.br_black })
+	hi("FidgetProgressVerbose", { ctermfg = colors.white })
+	hi("FidgetProgressDebug", { ctermfg = colors.br_black })
+	hi("FidgetProgressTrace", { ctermfg = colors.br_black })
+	hi("FidgetProgressLog", { ctermfg = colors.white })
+	hi("FidgetProgressWindow", { ctermfg = colors.white, ctermbg = colors.br_black })
+	hi("FidgetProgressBorder", { ctermfg = colors.br_black })
+	hi("FidgetProgressNormal", { ctermfg = colors.white })
+	hi("FidgetProgressHeader", { ctermfg = colors.red, cterm = "bold" })
+	hi("FidgetProgressFooter", { ctermfg = colors.br_black })
+	hi("FidgetProgressSeparator", { ctermfg = colors.br_black })
+	hi("FidgetProgressBar", { ctermfg = colors.red, ctermbg = colors.br_black })
+	hi("FidgetProgressBarFill", { ctermfg = colors.black, ctermbg = colors.red })
+	hi("FidgetProgressBarEmpty", { ctermfg = colors.br_black, ctermbg = colors.br_black })
+	hi("FidgetProgressBarBorder", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarText", { ctermfg = colors.white })
+	hi("FidgetProgressBarPercent", { ctermfg = colors.cyan })
+	hi("FidgetProgressBarSpinner", { ctermfg = colors.red })
+	hi("FidgetProgressBarTitle", { ctermfg = colors.red, cterm = "bold" })
+	hi("FidgetProgressBarMessage", { ctermfg = colors.white })
+	hi("FidgetProgressBarClient", { ctermfg = colors.cyan })
+	hi("FidgetProgressBarIcon", { ctermfg = colors.red })
+	hi("FidgetProgressBarGroup", { ctermfg = colors.cyan })
+	hi("FidgetProgressBarSubGroup", { ctermfg = colors.yellow })
+	hi("FidgetProgressBarTodo", { ctermfg = colors.br_yellow })
+	hi("FidgetProgressBarError", { ctermfg = colors.br_red })
+	hi("FidgetProgressBarWarn", { ctermfg = colors.br_yellow })
+	hi("FidgetProgressBarInfo", { ctermfg = colors.br_blue })
+	hi("FidgetProgressBarHint", { ctermfg = colors.br_cyan })
+	hi("FidgetProgressBarCancelled", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarPending", { ctermfg = colors.br_yellow })
+	hi("FidgetProgressBarRunning", { ctermfg = colors.red })
+	hi("FidgetProgressBarSuccess", { ctermfg = colors.br_blue })
+	hi("FidgetProgressBarFailed", { ctermfg = colors.br_red })
+	hi("FidgetProgressBarSkipped", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarCanceled", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarTimeout", { ctermfg = colors.br_red })
+	hi("FidgetProgressBarUnknown", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarDefault", { ctermfg = colors.white })
+	hi("FidgetProgressBarActive", { ctermfg = colors.red, cterm = "bold" })
+	hi("FidgetProgressBarInactive", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarQuiet", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarLoud", { ctermfg = colors.red, cterm = "bold" })
+	hi("FidgetProgressBarSilent", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarVerbose", { ctermfg = colors.white })
+	hi("FidgetProgressBarDebug", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarTrace", { ctermfg = colors.br_black })
+	hi("FidgetProgressBarLog", { ctermfg = colors.white })
+end
+
+return M
