@@ -149,12 +149,41 @@ Want to change your Neovim colors? Just change your terminal's color scheme:
 
 Pixel.nvim includes highlight groups for popular Neovim plugins:
 
-- **LSP**: Diagnostic colors, semantic highlighting
-- **Treesitter**: All `@` capture groups
-- **Telescope**: Fuzzy finder interface
-- **NvimTree/Neo-tree**: File explorers
-- **GitSigns**: Git integration
-- **GitGutter**: Git diff indicators
+### Core Language Support
+- **LSP**: Diagnostic colors, semantic highlighting, hover windows
+- **Treesitter**: All `@` capture groups for syntax highlighting
+- **Mason**: Package manager interface
+
+### File Management & Navigation
+- **Telescope**: Fuzzy finder interface, previews, selections
+- **NvimTree**: File explorer with git integration
+- **Neo-tree**: Modern file explorer with enhanced features
+
+### Git Integration
+- **GitSigns**: Git diff indicators in sign column
+- **Git**: Core git highlighting and diff views
+- **Diffview**: Side-by-side diff viewer
+
+### Code Enhancement
+- **Flash**: Jump/search highlighting
+- **Trouble**: Diagnostics and quickfix lists
+- **WhichKey**: Keybinding popup interface
+- **Indent Blankline**: Indentation guides
+- **Comment**: Comment highlighting enhancements
+
+### UI & Notifications
+- **Noice**: Enhanced UI components and notifications
+- **Snacks**: UI utilities and components
+- **Fidget**: LSP progress notifications
+- **Lualine**: Status line theme included at `lua/lualine/themes/pixel.lua`
+
+### Development Tools
+- **Blink**: Completion menu styling
+- **nvim-dap**: Debugger interface
+- **Conform**: Code formatting integration
+- **Lint**: Linting integration
+- **Mini**: Mini.nvim modules support
+- **Markdown**: Enhanced markdown highlighting
 
 ## Comparison with Traditional Themes
 
