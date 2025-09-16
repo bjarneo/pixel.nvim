@@ -14,6 +14,9 @@ Unlike traditional Neovim colorschemes that use hardcoded hex colors, Pixel.nvim
 - **Lightweight**: Minimal overhead with no GUI color definitions
 - **Consistent**: Your Neovim theme will always match your terminal aesthetic
 
+## State
+This project is currently in the preliminary stage, and adjustments are expected to be made.
+
 ## How It Works
 
 ### ANSI Color Mapping
