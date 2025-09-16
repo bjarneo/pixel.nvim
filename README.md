@@ -197,18 +197,6 @@ Pixel.nvim includes highlight groups for popular Neovim plugins:
 
 ## Examples
 
-### With Different Terminal Themes
-
-Since Pixel.nvim adapts to your terminal, here's how it looks with popular terminal themes:
-
-- **Catppuccin**: Warm, pastel colors
-- **Dracula**: Dark with vibrant accents
-- **Nord**: Cool, arctic colors
-- **Gruvbox**: Retro, warm colors
-- **Tokyo Night**: Modern, dark blue theme
-
-The same Neovim configuration works with all of them!
-
 ## Philosophy: Why Terminal Colors?
 
 1. **Consistency**: Your entire terminal environment uses the same color palette
