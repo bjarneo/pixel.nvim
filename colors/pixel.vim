@@ -1,5 +1,5 @@
 " Pixel colorscheme for Vim/Neovim - Dynamic ANSI color adaptation
-" Maintainer: Pixel Theme
+" Maintainer: Bjarne Øverli
 " License: MIT
 
 set background=dark
