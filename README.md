@@ -42,6 +42,11 @@ The colorscheme works by:
 2. **Using only `ctermfg`/`ctermbg`**: All highlight groups use terminal color indices
 3. **No GUI definitions**: No `guifg`/`guibg` attributes that would override terminal colors
 
+## Requirements
+
+- **Neovim 0.5+** (Lua support required)
+- Terminal emulator with ANSI color support
+
 ## Installation
 
 ### Using lazy.nvim
@@ -73,10 +78,10 @@ use {
 Plug 'bjarneo/pixel.nvim'
 ```
 
-Then in your `init.vim` or `init.lua`:
+Then in your `init.lua`:
 
-```vim
-colorscheme pixel
+```lua
+vim.cmd.colorscheme("pixel")
 ```
 
 ## Usage
@@ -88,11 +93,6 @@ Simply set the colorscheme in your Neovim configuration:
 ```lua
 -- init.lua
 vim.cmd.colorscheme("pixel")
-```
-
-```vim
-" init.vim
-colorscheme pixel
 ```
 
 ### Terminal Configuration
