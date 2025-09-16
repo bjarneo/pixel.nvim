@@ -157,7 +157,7 @@ function M.setup()
   require("pixel.treesitter").setup(colors)
   require("pixel.lualine").setup(colors)
   require("pixel.telescope").setup(colors)
-  require("pixel.nvim_tree").setup(colors)
+  require("pixel.nvimtree").setup(colors)
   require("pixel.neo_tree").setup(colors)
 
   -- Load additional common plugin modules
