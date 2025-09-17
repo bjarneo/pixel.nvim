@@ -48,4 +48,3 @@ function M.setup(colors)
 end
 
 return M
-

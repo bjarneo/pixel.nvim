@@ -84,6 +84,23 @@ Then in your `init.lua`:
 vim.cmd.colorscheme("pixel")
 ```
 
+
+### Omarchy neovim.lua
+```
+return {
+	{
+		"bjarneo/pixel.nvim",
+		name = "pixel",
+	},
+	{
+		"LazyVim/LazyVim",
+		opts = {
+			colorscheme = "pixel",
+		},
+	},
+}
+```
+
 ## Usage
 
 ### Basic Usage
