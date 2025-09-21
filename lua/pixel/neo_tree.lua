@@ -1,26 +1,11 @@
 -- Neo-tree support for Pixel colorscheme
 -- This module provides Neo-tree highlight groups
 
+-- Import shared utility functions
+local utils = require("pixel.utils")
+local hi = utils.hi
+
 local M = {}
-
--- Helper function to set highlight groups
-local function hi(group, opts)
-	local cmd = "highlight " .. group
-
-	if opts.ctermfg then
-		cmd = cmd .. " ctermfg=" .. opts.ctermfg
-	end
-
-	if opts.ctermbg then
-		cmd = cmd .. " ctermbg=" .. opts.ctermbg
-	end
-
-	if opts.cterm then
-		cmd = cmd .. " cterm=" .. opts.cterm
-	end
-
-	vim.cmd(cmd)
-end
 
 function M.setup(colors)
 	-- Neo-tree highlight groups
