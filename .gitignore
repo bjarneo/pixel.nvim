@@ -1,0 +1,45 @@
+# Vim/Neovim temporary files
+*.swp
+*.swo
+*~
+
+# Vim session files
+Session.vim
+.session
+
+# Neovim data
+.nvimrc
+.nvim/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Node.js (if using for tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary directories
+tmp/
+temp/
