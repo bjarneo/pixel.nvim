@@ -4,10 +4,16 @@ local colors = require("pixel.colorscheme")
 local M = {}
 
 M.normal = {
-	a = { bg = colors.blue, fg = colors.white, gui = "bold" },
-	b = { bg = colors.br_black, fg = colors.blue },
-	c = { bg = colors.black, fg = colors.white },
-	x = { bg = colors.black, fg = colors.white },
+	a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
+	b = { bg = colors.br_black, fg = colors.yellow },
+	c = {
+		bg = colors.black,
+		fg = colors.white,
+	},
+	x = {
+		bg = colors.black,
+		fg = colors.white,
+	},
 }
 
 M.insert = {
@@ -26,14 +32,13 @@ M.visual = {
 }
 
 M.replace = {
-	a = { bg = colors.red, fg = colors.white },
+	a = { bg = colors.red, fg = colors.black },
 	b = { bg = colors.br_black, fg = colors.red },
 }
 
 M.inactive = {
-	a = { bg = colors.black, fg = colors.br_black },
+	a = { bg = colors.black, fg = colors.yellow },
 	b = { bg = colors.black, fg = colors.br_black },
-	c = { bg = colors.black, fg = colors.br_black },
 }
 
 return M
