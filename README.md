@@ -2,6 +2,8 @@
 
 A dynamic Neovim colorscheme that adapts to your terminal's color palette, inspired by the bat command-line tool's approach to color theming.
 
+![Pixel.nvim with Monokai Terminal Colors](monokai.png)
+
 ## Philosophy
 
 Unlike traditional Neovim colorschemes that use hardcoded hex colors, Pixel.nvim uses only ANSI terminal colors (0-15). This means the theme automatically adapts to whatever color scheme you have configured in your terminal emulator - just like how `bat` displays syntax highlighting that matches your terminal's aesthetic.
