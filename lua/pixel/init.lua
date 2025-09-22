@@ -33,7 +33,7 @@ function M.setup()
 	-- Basic highlight groups - using only ANSI terminal colors
 	hi("Normal", { ctermfg = colors.white, ctermbg = colors.black })
 	hi("Cursor", { ctermfg = colors.black, ctermbg = colors.white })
-	hi("CursorLine", { ctermbg = colors.br_black })
+	hi("CursorLine", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("CursorColumn", { ctermbg = colors.br_black })
 	hi("LineNr", { ctermfg = colors.br_black })
 	hi("CursorLineNr", { ctermfg = colors.white })
@@ -141,4 +141,3 @@ end
 M.colors = colors
 
 return M
-
