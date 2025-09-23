@@ -67,7 +67,7 @@ function M.setup()
 	hi("Special", { ctermfg = colors.cyan })
 	hi("SpecialChar", { ctermfg = colors.br_cyan })
 	hi("Tag", { ctermfg = colors.red })
-	hi("Delimiter", { ctermfg = colors.green })
+	hi("Delimiter", { ctermfg = colors.br_black })
 	hi("SpecialComment", { ctermfg = colors.br_yellow })
 	hi("Debug", { ctermfg = colors.br_red })
 
