@@ -26,8 +26,8 @@ function M.setup(colors)
 	hi("NeoTreeSelectedDirectory", { ctermfg = colors.white, ctermbg = colors.blue })
 
 	-- Neo-tree window and borders
-	hi("NeoTreeNormal", { ctermfg = colors.white, ctermbg = colors.black })
-	hi("NeoTreeNormalNC", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("NeoTreeNormal", { ctermfg = colors.white })
+	hi("NeoTreeNormalNC", { ctermfg = colors.white })
 	hi("NeoTreeVertSplit", { ctermfg = colors.br_black })
 	hi("NeoTreeWinSeparator", { ctermfg = colors.br_black })
 end
