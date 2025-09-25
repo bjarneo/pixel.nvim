@@ -31,7 +31,7 @@ function M.setup()
 	vim.opt.termguicolors = false
 
 	-- Basic highlight groups - using only ANSI terminal colors
-	hi("Normal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("Normal", { ctermfg = colors.white })
 	hi("Cursor", { ctermfg = colors.black, ctermbg = colors.white })
 	hi("CursorLine", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("CursorColumn", { ctermbg = colors.br_black })
@@ -82,33 +82,33 @@ function M.setup()
 	hi("Search", { ctermfg = colors.black, ctermbg = colors.yellow, cterm = "bold" })
 	hi("IncSearch", { ctermfg = colors.black, ctermbg = colors.br_yellow, cterm = "bold" })
 	hi("StatusLine", { ctermfg = colors.white, ctermbg = colors.br_black, cterm = "bold" })
-	hi("StatusLineNC", { ctermfg = colors.br_black, ctermbg = colors.black })
+	hi("StatusLineNC", { ctermfg = colors.br_black })
 	hi("VertSplit", { ctermfg = colors.br_black })
 	hi("Pmenu", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("PmenuSel", { ctermfg = colors.black, ctermbg = colors.blue, cterm = "bold" })
 	hi("PmenuSbar", { ctermbg = colors.br_black })
 	hi("PmenuThumb", { ctermbg = colors.white })
-	hi("TabLine", { ctermfg = colors.br_black, ctermbg = colors.black })
-	hi("TabLineFill", { ctermbg = colors.black })
+	hi("TabLine", { ctermfg = colors.br_black })
+	hi("TabLineFill", {})
 	hi("TabLineSel", { ctermfg = colors.white, ctermbg = colors.br_black, cterm = "bold" })
 
 	-- Diff highlighting
-	hi("DiffAdd", { ctermfg = colors.green, ctermbg = colors.black, cterm = "bold" })
-	hi("DiffChange", { ctermfg = colors.yellow, ctermbg = colors.black })
-	hi("DiffDelete", { ctermfg = colors.red, ctermbg = colors.black, cterm = "bold" })
-	hi("DiffText", { ctermfg = colors.br_yellow, ctermbg = colors.black, cterm = "bold" })
+	hi("DiffAdd", { ctermfg = colors.green, cterm = "bold" })
+	hi("DiffChange", { ctermfg = colors.yellow })
+	hi("DiffDelete", { ctermfg = colors.red, cterm = "bold" })
+	hi("DiffText", { ctermfg = colors.br_yellow, cterm = "bold" })
 
 	-- Error and warning
-	hi("Error", { ctermfg = colors.br_red, ctermbg = colors.black, cterm = "bold" })
-	hi("Warning", { ctermfg = colors.br_yellow, ctermbg = colors.black, cterm = "bold" })
+	hi("Error", { ctermfg = colors.br_red, cterm = "bold" })
+	hi("Warning", { ctermfg = colors.br_yellow, cterm = "bold" })
 	hi("ErrorMsg", { ctermfg = colors.br_red, cterm = "bold" })
 	hi("WarningMsg", { ctermfg = colors.br_yellow, cterm = "bold" })
 	hi("Question", { ctermfg = colors.green, cterm = "bold" })
 	hi("MoreMsg", { ctermfg = colors.green, cterm = "bold" })
 
 	-- Folding
-	hi("Folded", { ctermfg = colors.br_black, ctermbg = colors.black, cterm = "italic" })
-	hi("FoldColumn", { ctermfg = colors.br_black, ctermbg = colors.black })
+	hi("Folded", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("FoldColumn", { ctermfg = colors.br_black })
 
 	-- Spelling
 	hi("SpellBad", { ctermfg = colors.red, cterm = "underline" })

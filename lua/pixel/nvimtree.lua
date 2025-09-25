@@ -8,16 +8,16 @@ local M = {}
 
 function M.setup(colors)
 	-- NvimTree general
-	hi("NvimTreeNormal", { ctermfg = colors.white, ctermbg = colors.black })
-	hi("NvimTreeNormalFloat", { ctermfg = colors.white, ctermbg = colors.black })
-	hi("NvimTreeNormalNC", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("NvimTreeNormal", { ctermfg = colors.white })
+	hi("NvimTreeNormalFloat", { ctermfg = colors.white })
+	hi("NvimTreeNormalNC", { ctermfg = colors.white })
 	hi("NvimTreeVertSplit", { ctermfg = colors.br_black })
 	hi("NvimTreeWinSeparator", { ctermfg = colors.br_black })
 	hi("NvimTreeEndOfBuffer", { ctermfg = colors.black })
 	hi("NvimTreeCursorLine", { ctermbg = colors.br_black })
 	hi("NvimTreeCursorColumn", { ctermbg = colors.br_black })
-	hi("NvimTreeStatusLine", { ctermfg = colors.black, ctermbg = colors.black })
-	hi("NvimTreeStatusLineNC", { ctermfg = colors.black, ctermbg = colors.black })
+	hi("NvimTreeStatusLine", { ctermfg = colors.black })
+	hi("NvimTreeStatusLineNC", { ctermfg = colors.black })
 
 	-- NvimTree folders
 	hi("NvimTreeFolderName", { ctermfg = colors.br_blue })
