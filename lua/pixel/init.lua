@@ -89,6 +89,7 @@ function M.setup()
 	hi("PmenuSbar", { ctermbg = colors.br_black })
 	hi("PmenuThumb", { ctermbg = colors.white })
 	hi("TabLine", { ctermfg = colors.br_black })
+	hi("TabLineFill", { ctermfg = colors.br_black })
 	hi("TabLineSel", { ctermfg = colors.white, ctermbg = colors.br_black, cterm = "bold" })
 
 	-- Diff highlighting
