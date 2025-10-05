@@ -6,7 +6,10 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
+	config = config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- DAP breakpoints
 	hi("DapBreakpoint", { ctermfg = colors.br_red })
 	hi("DapBreakpointCondition", { ctermfg = colors.br_yellow })
@@ -71,7 +74,7 @@ function M.setup(colors)
 	hi("DapUIWinSelectNC", { ctermfg = colors.red })
 
 	-- DAP virtual text
-	hi("DapVirtualText", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("DapVirtualText", { ctermfg = colors.br_black, cterm = italic })
 end
 
 return M

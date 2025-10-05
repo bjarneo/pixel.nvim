@@ -5,7 +5,7 @@ local M = {}
 local utils = require("pixel.utils")
 local hi = utils.hi
 
-function M.setup(colors)
+function M.setup(colors, config)
 	-- Indent Blankline v2 (legacy)
 	hi("IndentBlanklineChar", { ctermfg = colors.br_black })
 	hi("IndentBlanklineContextChar", { ctermfg = colors.br_blue })

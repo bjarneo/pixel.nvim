@@ -11,8 +11,19 @@ local colors = require("pixel.colorscheme")
 local utils = require("pixel.utils")
 local hi = utils.hi
 
+-- Default configuration
+local default_config = {
+	disable_italics = false,
+}
+
+-- Current configuration
+local config = vim.deepcopy(default_config)
+
 -- Setup basic colorscheme settings
-function M.setup()
+function M.setup(opts)
+	-- Merge user config with defaults
+	config = vim.tbl_deep_extend("force", default_config, opts or {})
+
 	-- Clear existing highlights
 	vim.cmd("highlight clear")
 
@@ -39,7 +50,7 @@ function M.setup()
 	hi("CursorLineNr", { ctermfg = colors.white })
 
 	-- Syntax highlighting - using ANSI colors for dynamic adaptation
-	hi("Comment", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("Comment", { ctermfg = colors.br_black, cterm = config.disable_italics and "NONE" or "italic" })
 	hi("String", { ctermfg = colors.green })
 	hi("Character", { ctermfg = colors.br_green })
 	hi("Number", { ctermfg = colors.cyan })
@@ -107,7 +118,7 @@ function M.setup()
 	hi("MoreMsg", { ctermfg = colors.green, cterm = "bold" })
 
 	-- Folding
-	hi("Folded", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("Folded", { ctermfg = colors.br_black, cterm = config.disable_italics and "NONE" or "italic" })
 	hi("FoldColumn", { ctermfg = colors.br_black })
 
 	-- Spelling
@@ -120,31 +131,31 @@ function M.setup()
 	hi("Directory", { ctermfg = colors.blue, cterm = "bold" })
 
 	-- Load plugin-specific highlight modules
-	require("pixel.git").setup(colors)
-	require("pixel.lsp").setup(colors)
-	require("pixel.treesitter").setup(colors)
-	require("pixel.telescope").setup(colors)
-	require("pixel.nvimtree").setup(colors)
-	require("pixel.neo_tree").setup(colors)
+	require("pixel.git").setup(colors, config)
+	require("pixel.lsp").setup(colors, config)
+	require("pixel.treesitter").setup(colors, config)
+	require("pixel.telescope").setup(colors, config)
+	require("pixel.nvimtree").setup(colors, config)
+	require("pixel.neo_tree").setup(colors, config)
 
 	-- Load additional common plugin modules
-	require("pixel.gitsigns").setup(colors)
-	require("pixel.mason").setup(colors)
-	require("pixel.trouble").setup(colors)
-	require("pixel.indent_blankline").setup(colors)
-	require("pixel.flash").setup(colors)
-	require("pixel.noice").setup(colors)
-	require("pixel.whichkey").setup(colors)
-	require("pixel.fidget").setup(colors)
-	require("pixel.diffview").setup(colors)
-	require("pixel.conform").setup(colors)
-	require("pixel.comment").setup(colors)
-	require("pixel.lint").setup(colors)
-	require("pixel.nvim-dap").setup(colors)
-	require("pixel.mini").setup(colors)
-	require("pixel.markdown").setup(colors)
-	require("pixel.snacks").setup(colors)
-	require("pixel.blink").setup(colors)
+	require("pixel.gitsigns").setup(colors, config)
+	require("pixel.mason").setup(colors, config)
+	require("pixel.trouble").setup(colors, config)
+	require("pixel.indent_blankline").setup(colors, config)
+	require("pixel.flash").setup(colors, config)
+	require("pixel.noice").setup(colors, config)
+	require("pixel.whichkey").setup(colors, config)
+	require("pixel.fidget").setup(colors, config)
+	require("pixel.diffview").setup(colors, config)
+	require("pixel.conform").setup(colors, config)
+	require("pixel.comment").setup(colors, config)
+	require("pixel.lint").setup(colors, config)
+	require("pixel.nvim-dap").setup(colors, config)
+	require("pixel.mini").setup(colors, config)
+	require("pixel.markdown").setup(colors, config)
+	require("pixel.snacks").setup(colors, config)
+	require("pixel.blink").setup(colors, config)
 end
 
 -- Export colors for use in other modules

@@ -6,7 +6,10 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
+	config = config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- Trouble window
 	hi("TroubleNormal", { ctermfg = colors.white, ctermbg = colors.black })
 	hi("TroubleNormalNC", { ctermfg = colors.white, ctermbg = colors.black })
@@ -61,7 +64,7 @@ function M.setup(colors)
 	hi("TroublePreviewTitle", { ctermfg = colors.red, cterm = "bold" })
 
 	-- Trouble help
-	hi("TroubleHelp", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("TroubleHelp", { ctermfg = colors.br_black, cterm = italic })
 	hi("TroubleHelpHeader", { ctermfg = colors.red, cterm = "bold" })
 
 	-- Trouble cursor
@@ -72,7 +75,7 @@ function M.setup(colors)
 	hi("TroubleMatch", { ctermfg = colors.black, ctermbg = colors.yellow })
 
 	-- Trouble virtual text
-	hi("TroubleVirtualText", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("TroubleVirtualText", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Trouble pos
 	hi("TroublePos", { ctermfg = colors.br_black })

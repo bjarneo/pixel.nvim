@@ -5,7 +5,10 @@ local M = {}
 local utils = require("pixel.utils")
 local hi = utils.hi
 
-function M.setup(colors)
+function M.setup(colors, config)
+	config = config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- GitSigns basic signs
 	hi("GitSignsAdd", { ctermfg = colors.green })
 	hi("GitSignsChange", { ctermfg = colors.yellow })
@@ -36,7 +39,7 @@ function M.setup(colors)
 	hi("GitSignsChangePreview", { ctermfg = colors.yellow, ctermbg = colors.br_black })
 
 	-- GitSigns current line blame
-	hi("GitSignsCurrentLineBlame", { ctermfg = colors.br_black, ctermbg = colors.black, cterm = "italic" })
+	hi("GitSignsCurrentLineBlame", { ctermfg = colors.br_black, ctermbg = colors.black, cterm = italic })
 
 	-- GitSigns word diff
 	hi("GitSignsAddWord", { ctermfg = colors.black, ctermbg = colors.green })
@@ -65,7 +68,7 @@ function M.setup(colors)
 	hi("GitSignsDiffText", { ctermfg = colors.yellow, ctermbg = colors.br_black })
 
 	-- GitSigns blame
-	hi("GitSignsBlame", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("GitSignsBlame", { ctermfg = colors.br_black, cterm = italic })
 	hi("GitSignsBlameHash", { ctermfg = colors.br_black })
 	hi("GitSignsBlameAuthor", { ctermfg = colors.cyan })
 	hi("GitSignsBlameDate", { ctermfg = colors.br_black })

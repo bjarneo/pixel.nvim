@@ -7,7 +7,10 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
+  config = config or {}
+  local italic = config.disable_italics and "NONE" or "italic"
+
   -- Treesitter highlights
   hi("@annotation", { ctermfg = colors.blue })
   hi("@attribute", { ctermfg = colors.blue })
@@ -16,8 +19,8 @@ function M.setup(colors)
   hi("@character.special", { ctermfg = colors.br_green })
 
   -- Comments
-  hi("@comment", { ctermfg = colors.br_black, cterm = "italic" })
-  hi("@comment.documentation", { ctermfg = colors.br_black, cterm = "italic" })
+  hi("@comment", { ctermfg = colors.br_black, cterm = italic })
+  hi("@comment.documentation", { ctermfg = colors.br_black, cterm = italic })
 
   -- Control flow
   hi("@conditional", { ctermfg = colors.blue, cterm = "bold" })
@@ -75,7 +78,7 @@ function M.setup(colors)
   -- Special elements
   hi("@symbol", { ctermfg = colors.magenta })
   hi("@label", { ctermfg = colors.yellow })
-  hi("@include", { ctermfg = colors.blue, cterm = "italic" })
+  hi("@include", { ctermfg = colors.blue, cterm = italic })
   hi("@define", { ctermfg = colors.blue })
   hi("@debug", { ctermfg = colors.br_red })
   hi("@error", { ctermfg = colors.br_red })
@@ -88,7 +91,7 @@ function M.setup(colors)
   -- Text elements (Markdown, etc.)
   hi("@text", { ctermfg = colors.white })
   hi("@text.strong", { ctermfg = colors.white, cterm = "bold" })
-  hi("@text.emphasis", { ctermfg = colors.white, cterm = "italic" })
+  hi("@text.emphasis", { ctermfg = colors.white, cterm = italic })
   hi("@text.underline", { ctermfg = colors.white, cterm = "underline" })
   hi("@text.strike", { ctermfg = colors.white, cterm = "strikethrough" })
   hi("@text.title", { ctermfg = colors.blue, cterm = "bold" })

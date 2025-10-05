@@ -7,7 +7,7 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
   -- Telescope general
   hi("TelescopeSelection", { ctermfg = colors.white, ctermbg = colors.br_black })
   hi("TelescopeSelectionCaret", { ctermfg = colors.white, ctermbg = colors.br_black })

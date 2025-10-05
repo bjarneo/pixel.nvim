@@ -7,7 +7,7 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
 
   -- Git gutter highlight groups
   hi("GitGutterAdd", { ctermfg = colors.green })

@@ -7,7 +7,10 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
+  config = config or {}
+  local italic = config.disable_italics and "NONE" or "italic"
+
   -- LSP semantic tokens
   hi("@lsp.type.class", { ctermfg = colors.yellow })
   hi("@lsp.type.comment", { ctermfg = colors.br_black })
@@ -77,11 +80,11 @@ function M.setup(colors)
   hi("LspSignatureActiveParameter", { ctermfg = colors.br_green, cterm = "bold" })
 
   -- LSP code lens
-  hi("LspCodeLens", { ctermfg = colors.br_black, cterm = "italic" })
+  hi("LspCodeLens", { ctermfg = colors.br_black, cterm = italic })
   hi("LspCodeLensSeparator", { ctermfg = colors.br_black })
 
   -- LSP inlay hints
-  hi("LspInlayHint", { ctermfg = colors.br_black, ctermbg = colors.black, cterm = "italic" })
+  hi("LspInlayHint", { ctermfg = colors.br_black, ctermbg = colors.black, cterm = italic })
 end
 
 return M

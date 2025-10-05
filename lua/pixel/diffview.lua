@@ -5,7 +5,7 @@ local M = {}
 local utils = require("pixel.utils")
 local hi = utils.hi
 
-function M.setup(colors)
+function M.setup(colors, config)
 	-- Diffview panel
 	hi("DiffviewNormal", { ctermfg = colors.white, ctermbg = colors.black })
 	hi("DiffviewCursorLine", { ctermbg = colors.br_black })

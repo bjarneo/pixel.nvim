@@ -6,7 +6,10 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
+	config = config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- Mason window
 	hi("MasonNormal", { ctermfg = colors.white, ctermbg = colors.black })
 	hi("MasonHeader", { ctermfg = colors.red, ctermbg = colors.br_black, cterm = "bold" })
@@ -93,7 +96,7 @@ function M.setup(colors)
 	hi("MasonCategory", { ctermfg = colors.blue })
 
 	-- Mason description
-	hi("MasonDescription", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("MasonDescription", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Mason homepage
 	hi("MasonHomepage", { ctermfg = colors.br_blue, cterm = "underline" })
@@ -141,7 +144,7 @@ function M.setup(colors)
 	hi("MasonText", { ctermfg = colors.white })
 
 	-- Mason help
-	hi("MasonHelp", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("MasonHelp", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Mason toggle
 	hi("MasonToggle", { ctermfg = colors.blue })
@@ -162,7 +165,7 @@ function M.setup(colors)
 	hi("MasonCursor", { ctermfg = colors.black, ctermbg = colors.white })
 
 	-- Mason virtual text
-	hi("MasonVirtualText", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("MasonVirtualText", { ctermfg = colors.br_black, cterm = italic })
 end
 
 return M

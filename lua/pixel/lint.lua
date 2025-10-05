@@ -6,7 +6,7 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
 	-- Lint signs
 	hi("LintError", { ctermfg = colors.br_red })
 	hi("LintWarning", { ctermfg = colors.br_yellow })

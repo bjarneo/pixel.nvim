@@ -6,7 +6,10 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors)
+function M.setup(colors, config)
+	config = config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- Noice command line
 	hi("NoiceCmdline", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("NoiceCmdlineIcon", { ctermfg = colors.red })
@@ -58,7 +61,7 @@ function M.setup(colors)
 	hi("NoiceSplitBorder", { ctermfg = colors.br_black })
 
 	-- Noice virtual text
-	hi("NoiceVirtualText", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("NoiceVirtualText", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Noice confirm dialog
 	hi("NoiceConfirm", { ctermfg = colors.white, ctermbg = colors.br_black })
