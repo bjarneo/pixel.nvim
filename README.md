@@ -58,7 +58,6 @@ The colorscheme works by:
   "bjarneo/pixel.nvim",
   priority = 1000,
   config = function()
-    require("pixel").setup()
     vim.cmd.colorscheme("pixel")
   end,
 }
@@ -70,7 +69,6 @@ The colorscheme works by:
 use {
   "bjarneo/pixel.nvim",
   config = function()
-    require("pixel").setup()
     vim.cmd.colorscheme("pixel")
   end,
 }
@@ -121,7 +119,6 @@ vim.cmd.colorscheme("pixel")
 Pixel.nvim supports configuration options that can be passed to the `setup` function:
 
 ```lua
--- init.lua
 require("pixel").setup({
   disable_italics = false,
 })
@@ -130,7 +127,7 @@ vim.cmd.colorscheme("pixel")
 
 #### Available Options
 
-- `disable_italics` (boolean, default: `false`): When set to `true`, disables italic formatting for comments and other elements that use italics. This is useful if your terminal or font doesn't support italics well, or if you simply prefer non-italic comments.
+- `disable_italics` (boolean, default: `false`): When set to `true`, disables italic formatting for comments and other elements that use italics.
 
 ### Terminal Configuration
 
