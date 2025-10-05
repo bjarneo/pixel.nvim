@@ -11,8 +11,19 @@ local colors = require("pixel.colorscheme")
 local utils = require("pixel.utils")
 local hi = utils.hi
 
+-- Default configuration
+local default_config = {
+	disable_italics = false,
+}
+
+-- Current configuration (module-level, accessible to other modules)
+local config = vim.deepcopy(default_config)
+
 -- Setup basic colorscheme settings
-function M.setup()
+function M.setup(opts)
+	-- Merge user config with defaults
+	config = vim.tbl_deep_extend("force", default_config, opts or {})
+
 	-- Clear existing highlights
 	vim.cmd("highlight clear")
 
@@ -39,7 +50,7 @@ function M.setup()
 	hi("CursorLineNr", { ctermfg = colors.white })
 
 	-- Syntax highlighting - using ANSI colors for dynamic adaptation
-	hi("Comment", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("Comment", { ctermfg = colors.br_black, cterm = config.disable_italics and "NONE" or "italic" })
 	hi("String", { ctermfg = colors.green })
 	hi("Character", { ctermfg = colors.br_green })
 	hi("Number", { ctermfg = colors.cyan })
@@ -107,7 +118,7 @@ function M.setup()
 	hi("MoreMsg", { ctermfg = colors.green, cterm = "bold" })
 
 	-- Folding
-	hi("Folded", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("Folded", { ctermfg = colors.br_black, cterm = config.disable_italics and "NONE" or "italic" })
 	hi("FoldColumn", { ctermfg = colors.br_black })
 
 	-- Spelling
@@ -147,7 +158,8 @@ function M.setup()
 	require("pixel.blink").setup(colors)
 end
 
--- Export colors for use in other modules
+-- Export colors and config for use in other modules
 M.colors = colors
+M.config = config
 
 return M

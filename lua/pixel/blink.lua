@@ -6,6 +6,9 @@ local utils = require("pixel.utils")
 local hi = utils.hi
 
 function M.setup(colors)
+	local config = require("pixel").config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- Blink completion menu
 	hi("BlinkCmpMenu", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("BlinkCmpMenuBorder", { ctermfg = colors.br_black })
@@ -15,7 +18,7 @@ function M.setup(colors)
 	-- Blink completion items
 	hi("BlinkCmpLabel", { ctermfg = colors.white })
 	hi("BlinkCmpLabelDetail", { ctermfg = colors.br_black })
-	hi("BlinkCmpLabelDescription", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("BlinkCmpLabelDescription", { ctermfg = colors.br_black, cterm = italic })
 	hi("BlinkCmpLabelMatch", { ctermfg = colors.red, cterm = "bold" })
 	hi("BlinkCmpLabelDeprecated", { ctermfg = colors.br_black, cterm = "strikethrough" })
 
@@ -76,7 +79,7 @@ function M.setup(colors)
 	hi("BlinkCmpDocSeparator", { ctermfg = colors.br_black })
 
 	-- Blink completion ghost text
-	hi("BlinkCmpGhostText", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("BlinkCmpGhostText", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Blink completion scrollbar
 	hi("BlinkCmpScrollbar", { ctermfg = colors.br_black, ctermbg = colors.br_black })

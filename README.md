@@ -114,6 +114,21 @@ Simply set the colorscheme in your Neovim configuration:
 vim.cmd.colorscheme("pixel")
 ```
 
+### Configuration
+
+Pixel.nvim supports configuration options that can be passed to the `setup` function:
+
+```lua
+require("pixel").setup({
+  disable_italics = false,
+})
+vim.cmd.colorscheme("pixel")
+```
+
+#### Available Options
+
+- `disable_italics` (boolean, default: `false`): When set to `true`, disables italic formatting for comments and other elements that use italics.
+
 ### Terminal Configuration
 
 The beauty of Pixel.nvim is that you configure colors in your terminal, not in Neovim:

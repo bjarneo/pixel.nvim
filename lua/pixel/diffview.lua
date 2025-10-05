@@ -6,6 +6,9 @@ local utils = require("pixel.utils")
 local hi = utils.hi
 
 function M.setup(colors)
+	local config = require("pixel").config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- Diffview panel
 	hi("DiffviewNormal", { ctermfg = colors.white, ctermbg = colors.black })
 	hi("DiffviewCursorLine", { ctermbg = colors.br_black })
@@ -55,7 +58,7 @@ function M.setup(colors)
 	hi("DiffviewFilePanelLoading", { ctermfg = colors.br_yellow })
 	hi("DiffviewFilePanelEmpty", { ctermfg = colors.br_black })
 	hi("DiffviewFilePanelEmptyFolder", { ctermfg = colors.br_black })
-	hi("DiffviewFilePanelEmptyMessage", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("DiffviewFilePanelEmptyMessage", { ctermfg = colors.br_black, cterm = italic })
 	hi("DiffviewFilePanelBinary", { ctermfg = colors.br_black })
 	hi("DiffviewFilePanelSymlink", { ctermfg = colors.br_blue })
 	hi("DiffviewFilePanelSubmodule", { ctermfg = colors.yellow })

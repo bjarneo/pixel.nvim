@@ -7,6 +7,9 @@ local hi = utils.hi
 local M = {}
 
 function M.setup(colors)
+	local config = require("pixel").config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- WhichKey main elements
 	hi("WhichKey", { ctermfg = colors.red, cterm = "bold" })
 	hi("WhichKeyGroup", { ctermfg = colors.blue })
@@ -53,7 +56,7 @@ function M.setup(colors)
 	hi("WhichKeyWindow", { ctermfg = colors.br_black })
 
 	-- WhichKey hints
-	hi("WhichKeyHint", { ctermfg = colors.br_cyan, cterm = "italic" })
+	hi("WhichKeyHint", { ctermfg = colors.br_cyan, cterm = italic })
 	hi("WhichKeyMapping", { ctermfg = colors.white })
 	hi("WhichKeyCommand", { ctermfg = colors.red })
 	hi("WhichKeyPrefix", { ctermfg = colors.blue, cterm = "bold" })
