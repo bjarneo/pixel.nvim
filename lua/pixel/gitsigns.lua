@@ -6,7 +6,6 @@ local utils = require("pixel.utils")
 local hi = utils.hi
 
 function M.setup(colors)
-	-- Get config from main module
 	local config = require("pixel").config or {}
 	local italic = config.disable_italics and "NONE" or "italic"
 

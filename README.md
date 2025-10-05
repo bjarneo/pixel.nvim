@@ -58,10 +58,7 @@ The colorscheme works by:
   "bjarneo/pixel.nvim",
   priority = 1000,
   config = function()
-    require("pixel").setup({
-      -- Optional: Configure the plugin
-      -- disable_italics = false,
-    })
+    require("pixel").setup()
     vim.cmd.colorscheme("pixel")
   end,
 }
@@ -73,10 +70,7 @@ The colorscheme works by:
 use {
   "bjarneo/pixel.nvim",
   config = function()
-    require("pixel").setup({
-      -- Optional: Configure the plugin
-      -- disable_italics = false,
-    })
+    require("pixel").setup()
     vim.cmd.colorscheme("pixel")
   end,
 }
@@ -129,7 +123,7 @@ Pixel.nvim supports configuration options that can be passed to the `setup` func
 ```lua
 -- init.lua
 require("pixel").setup({
-  disable_italics = false,  -- Set to true to disable italic formatting (default: false)
+  disable_italics = false,
 })
 vim.cmd.colorscheme("pixel")
 ```
