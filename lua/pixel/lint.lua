@@ -7,6 +7,9 @@ local hi = utils.hi
 local M = {}
 
 function M.setup(colors, config)
+	config = config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- Lint signs
 	hi("LintError", { ctermfg = colors.br_red })
 	hi("LintWarning", { ctermfg = colors.br_yellow })
@@ -18,10 +21,10 @@ function M.setup(colors, config)
 	hi("LintSignHint", { ctermfg = colors.br_cyan })
 
 	-- Lint virtual text
-	hi("LintVirtualTextError", { ctermfg = colors.br_red, cterm = "italic" })
-	hi("LintVirtualTextWarning", { ctermfg = colors.br_yellow, cterm = "italic" })
-	hi("LintVirtualTextInfo", { ctermfg = colors.br_blue, cterm = "italic" })
-	hi("LintVirtualTextHint", { ctermfg = colors.br_cyan, cterm = "italic" })
+	hi("LintVirtualTextError", { ctermfg = colors.br_red, cterm = italic })
+	hi("LintVirtualTextWarning", { ctermfg = colors.br_yellow, cterm = italic })
+	hi("LintVirtualTextInfo", { ctermfg = colors.br_blue, cterm = italic })
+	hi("LintVirtualTextHint", { ctermfg = colors.br_cyan, cterm = italic })
 
 	-- Lint underline
 	hi("LintUnderlineError", { ctermfg = colors.br_red, cterm = "underline" })
