@@ -5,7 +5,7 @@ local M = {}
 local utils = require("pixel.utils")
 local hi = utils.hi
 
-function M.setup(colors, config)
+function M.setup(colors)
 	-- Fidget progress
 	hi("FidgetProgress", { ctermfg = colors.red })
 	hi("FidgetProgressDone", { ctermfg = colors.br_blue })

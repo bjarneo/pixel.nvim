@@ -5,7 +5,7 @@ local M = {}
 local utils = require("pixel.utils")
 local hi = utils.hi
 
-function M.setup(colors, config)
+function M.setup(colors)
 	-- Flash main highlights
 	hi("FlashBackdrop", { ctermfg = colors.br_black })
 	hi("FlashLabel", { ctermfg = colors.black, ctermbg = colors.red, cterm = "bold" })

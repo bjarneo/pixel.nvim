@@ -6,7 +6,7 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors, config)
+function M.setup(colors)
 	-- Mini.ai (textobjects)
 	hi("MiniAiTextobject", { ctermfg = colors.red, ctermbg = colors.br_black })
 

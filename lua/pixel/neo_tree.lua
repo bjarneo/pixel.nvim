@@ -7,7 +7,7 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors, config)
+function M.setup(colors)
 	-- Neo-tree highlight groups
 	hi("NeoTreeDirectoryName", { ctermfg = colors.blue })
 	hi("NeoTreeDirectoryIcon", { ctermfg = colors.blue })

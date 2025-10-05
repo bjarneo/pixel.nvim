@@ -16,7 +16,7 @@ local default_config = {
 	disable_italics = false,
 }
 
--- Current configuration
+-- Current configuration (module-level, accessible to other modules)
 local config = vim.deepcopy(default_config)
 
 -- Setup basic colorscheme settings
@@ -131,34 +131,35 @@ function M.setup(opts)
 	hi("Directory", { ctermfg = colors.blue, cterm = "bold" })
 
 	-- Load plugin-specific highlight modules
-	require("pixel.git").setup(colors, config)
-	require("pixel.lsp").setup(colors, config)
-	require("pixel.treesitter").setup(colors, config)
-	require("pixel.telescope").setup(colors, config)
-	require("pixel.nvimtree").setup(colors, config)
-	require("pixel.neo_tree").setup(colors, config)
+	require("pixel.git").setup(colors)
+	require("pixel.lsp").setup(colors)
+	require("pixel.treesitter").setup(colors)
+	require("pixel.telescope").setup(colors)
+	require("pixel.nvimtree").setup(colors)
+	require("pixel.neo_tree").setup(colors)
 
 	-- Load additional common plugin modules
-	require("pixel.gitsigns").setup(colors, config)
-	require("pixel.mason").setup(colors, config)
-	require("pixel.trouble").setup(colors, config)
-	require("pixel.indent_blankline").setup(colors, config)
-	require("pixel.flash").setup(colors, config)
-	require("pixel.noice").setup(colors, config)
-	require("pixel.whichkey").setup(colors, config)
-	require("pixel.fidget").setup(colors, config)
-	require("pixel.diffview").setup(colors, config)
-	require("pixel.conform").setup(colors, config)
-	require("pixel.comment").setup(colors, config)
-	require("pixel.lint").setup(colors, config)
-	require("pixel.nvim-dap").setup(colors, config)
-	require("pixel.mini").setup(colors, config)
-	require("pixel.markdown").setup(colors, config)
-	require("pixel.snacks").setup(colors, config)
-	require("pixel.blink").setup(colors, config)
+	require("pixel.gitsigns").setup(colors)
+	require("pixel.mason").setup(colors)
+	require("pixel.trouble").setup(colors)
+	require("pixel.indent_blankline").setup(colors)
+	require("pixel.flash").setup(colors)
+	require("pixel.noice").setup(colors)
+	require("pixel.whichkey").setup(colors)
+	require("pixel.fidget").setup(colors)
+	require("pixel.diffview").setup(colors)
+	require("pixel.conform").setup(colors)
+	require("pixel.comment").setup(colors)
+	require("pixel.lint").setup(colors)
+	require("pixel.nvim-dap").setup(colors)
+	require("pixel.mini").setup(colors)
+	require("pixel.markdown").setup(colors)
+	require("pixel.snacks").setup(colors)
+	require("pixel.blink").setup(colors)
 end
 
--- Export colors for use in other modules
+-- Export colors and config for use in other modules
 M.colors = colors
+M.config = config
 
 return M

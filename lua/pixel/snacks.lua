@@ -6,7 +6,7 @@ local hi = utils.hi
 
 local M = {}
 
-function M.setup(colors, config)
+function M.setup(colors)
 	-- Snacks notifications
 	hi("SnacksNotificationInfo", { ctermfg = colors.br_blue })
 	hi("SnacksNotificationWarn", { ctermfg = colors.br_yellow })

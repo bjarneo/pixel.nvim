@@ -5,7 +5,7 @@ local M = {}
 local utils = require("pixel.utils")
 local hi = utils.hi
 
-function M.setup(colors, config)
+function M.setup(colors)
 	-- Conform formatting
 	hi("ConformFormat", { ctermfg = colors.br_blue })
 	hi("ConformFormatSuccess", { ctermfg = colors.br_blue })
