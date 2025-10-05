@@ -7,6 +7,9 @@ local hi = utils.hi
 local M = {}
 
 function M.setup(colors)
+	local config = require("pixel").config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- Markdown headings
 	hi("markdownHeadingDelimiter", { ctermfg = colors.blue, cterm = "bold" })
 	hi("markdownH1", { ctermfg = colors.blue, cterm = "bold" })
@@ -25,10 +28,10 @@ function M.setup(colors)
 	-- Markdown text formatting
 	hi("markdownBold", { ctermfg = colors.white, cterm = "bold" })
 	hi("markdownBoldDelimiter", { ctermfg = colors.white, cterm = "bold" })
-	hi("markdownItalic", { ctermfg = colors.white, cterm = "italic" })
-	hi("markdownItalicDelimiter", { ctermfg = colors.white, cterm = "italic" })
-	hi("markdownBoldItalic", { ctermfg = colors.white, cterm = "bold", cterm = "italic" })
-	hi("markdownBoldItalicDelimiter", { ctermfg = colors.white, cterm = "bold", cterm = "italic" })
+	hi("markdownItalic", { ctermfg = colors.white, cterm = italic })
+	hi("markdownItalicDelimiter", { ctermfg = colors.white, cterm = italic })
+	hi("markdownBoldItalic", { ctermfg = colors.white, cterm = config.disable_italics and "bold" or "bold,italic" })
+	hi("markdownBoldItalicDelimiter", { ctermfg = colors.white, cterm = config.disable_italics and "bold" or "bold,italic" })
 	hi("markdownStrike", { ctermfg = colors.white, cterm = "strikethrough" })
 	hi("markdownStrikeDelimiter", { ctermfg = colors.white, cterm = "strikethrough" })
 
@@ -61,8 +64,8 @@ function M.setup(colors)
 	hi("markdownCheckboxUnchecked", { ctermfg = colors.br_black, cterm = "bold" })
 
 	-- Markdown quotes
-	hi("markdownBlockquote", { ctermfg = colors.br_black, cterm = "italic" })
-	hi("markdownBlockquoteDelimiter", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("markdownBlockquote", { ctermfg = colors.br_black, cterm = italic })
+	hi("markdownBlockquoteDelimiter", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Markdown tables
 	hi("markdownTable", { ctermfg = colors.white })
@@ -92,7 +95,7 @@ function M.setup(colors)
 	hi("markdownHTMLArg", { ctermfg = colors.cyan })
 	hi("markdownHTMLValue", { ctermfg = colors.green })
 	hi("markdownHTMLTitle", { ctermfg = colors.green })
-	hi("markdownHTMLComment", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("markdownHTMLComment", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Markdown line break
 	hi("markdownLineBreak", { ctermfg = colors.black, ctermbg = colors.br_black })
@@ -112,7 +115,7 @@ function M.setup(colors)
 	hi("@markup.heading.6.marker.markdown", { ctermfg = colors.blue, cterm = "bold" })
 
 	hi("@markup.strong.markdown_inline", { ctermfg = colors.white, cterm = "bold" })
-	hi("@markup.italic.markdown_inline", { ctermfg = colors.white, cterm = "italic" })
+	hi("@markup.italic.markdown_inline", { ctermfg = colors.white, cterm = italic })
 	hi("@markup.strikethrough.markdown_inline", { ctermfg = colors.white, cterm = "strikethrough" })
 	hi("@markup.raw.markdown_inline", { ctermfg = colors.green })
 	hi("@markup.raw.block.markdown", { ctermfg = colors.green })
@@ -122,7 +125,7 @@ function M.setup(colors)
 	hi("@markup.list.markdown", { ctermfg = colors.blue })
 	hi("@markup.list.checked.markdown", { ctermfg = colors.green, cterm = "bold" })
 	hi("@markup.list.unchecked.markdown", { ctermfg = colors.br_black, cterm = "bold" })
-	hi("@markup.quote.markdown", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("@markup.quote.markdown", { ctermfg = colors.br_black, cterm = italic })
 
 	-- Markdown plugins
 	hi("MarkdownError", { ctermfg = colors.br_red })
@@ -147,7 +150,7 @@ function M.setup(colors)
 	hi("RenderMarkdownHint", { ctermfg = colors.br_cyan })
 	hi("RenderMarkdownWarn", { ctermfg = colors.br_yellow })
 	hi("RenderMarkdownError", { ctermfg = colors.br_red })
-	hi("RenderMarkdownQuote", { ctermfg = colors.br_black, cterm = "italic" })
+	hi("RenderMarkdownQuote", { ctermfg = colors.br_black, cterm = italic })
 	hi("RenderMarkdownLink", { ctermfg = colors.br_green, cterm = "underline" })
 	hi("RenderMarkdownImage", { ctermfg = colors.red })
 end

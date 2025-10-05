@@ -7,6 +7,9 @@ local hi = utils.hi
 local M = {}
 
 function M.setup(colors)
+	local config = require("pixel").config or {}
+	local italic = config.disable_italics and "NONE" or "italic"
+
 	-- NvimTree general
 	hi("NvimTreeNormal", { ctermfg = colors.white })
 	hi("NvimTreeNormalFloat", { ctermfg = colors.white })
@@ -32,8 +35,8 @@ function M.setup(colors)
 	hi("NvimTreeFileName", { ctermfg = colors.white })
 	hi("NvimTreeFileIcon", { ctermfg = colors.white })
 	hi("NvimTreeExecFile", { ctermfg = colors.green, cterm = "bold" })
-	hi("NvimTreeOpenedFile", { ctermfg = colors.white, cterm = "italic" })
-	hi("NvimTreeModifiedFile", { ctermfg = colors.yellow, cterm = "italic" })
+	hi("NvimTreeOpenedFile", { ctermfg = colors.white, cterm = italic })
+	hi("NvimTreeModifiedFile", { ctermfg = colors.yellow, cterm = italic })
 	hi("NvimTreeSpecialFile", { ctermfg = colors.br_green, cterm = "bold" })
 	hi("NvimTreeImageFile", { ctermfg = colors.red })
 	hi("NvimTreeMarkdownFile", { ctermfg = colors.br_blue })
