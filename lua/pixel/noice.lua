@@ -24,31 +24,26 @@ function M.setup(colors)
 	hi("NoiceCmdlinePopupBorder", { ctermfg = colors.br_black })
 	hi("NoiceCmdlinePopupTitle", { ctermfg = colors.red, cterm = "bold" })
 
-	-- Noice command line prompt
-	hi("NoiceCmdlinePrompt", { ctermfg = colors.blue, cterm = "bold" })
-	hi("NoiceCmdlinePromptTitle", { ctermfg = colors.red, cterm = "bold" })
+-- Noice popupmenu
+hi("NoicePopupmenu", { ctermfg = colors.white, ctermbg = colors.br_black })
+hi("NoicePopupmenuSelected", { ctermfg = colors.white, ctermbg = colors.br_black })
+hi("NoicePopupmenuBorder", { ctermfg = colors.br_black, ctermbg = colors.br_black })
 
-	-- Noice LSP progress
-	hi("NoiceLspProgressClient", { ctermfg = colors.cyan })
-	hi("NoiceLspProgressSpinner", { ctermfg = colors.red })
-	hi("NoiceLspProgressTitle", { ctermfg = colors.white })
+-- Noice messages
+hi("NoiceConfirm", { ctermfg = colors.white, ctermbg = colors.br_black })
+hi("NoiceConfirmBorder", { ctermfg = colors.br_black, ctermbg = colors.br_black })
 
-	-- Noice messages
-	hi("NoiceMessage", { ctermfg = colors.white })
-	hi("NoiceMessageConfirm", { ctermfg = colors.br_blue })
-	hi("NoiceMessageError", { ctermfg = colors.br_red })
-	hi("NoiceMessageInfo", { ctermfg = colors.br_blue })
-	hi("NoiceMessageWarn", { ctermfg = colors.br_yellow })
+-- Noice notifications
+hi("NoiceNotification", { ctermfg = colors.white, ctermbg = colors.br_black })
+hi("NoiceNotificationBorder", { ctermfg = colors.br_black, ctermbg = colors.br_black })
 
-	-- Noice popup menu
-	hi("NoicePopupmenu", { ctermfg = colors.white, ctermbg = colors.br_black })
-	hi("NoicePopupmenuBorder", { ctermfg = colors.br_black })
-	hi("NoicePopupmenuMatch", { ctermfg = colors.red, cterm = "bold" })
-	hi("NoicePopupmenuSelected", { ctermfg = colors.white, ctermbg = colors.br_black })
+-- Noice format
+hi("NoiceFormatProgressDone", { ctermfg = colors.br_blue, ctermbg = colors.br_black })
+hi("NoiceFormatProgressTodo", { ctermfg = colors.br_black, ctermbg = colors.br_black })
 
-	-- Noice search
-	hi("NoiceSearch", { ctermfg = colors.black, ctermbg = colors.yellow })
-	hi("NoiceSearchCount", { ctermfg = colors.br_blue, ctermbg = colors.br_black })
+-- Noice LSP progress
+hi("NoiceLspProgressTitle", { ctermfg = colors.blue, cterm = "bold" })
+hi("NoiceLspProgressClient", { ctermfg = colors.cyan })
 
 	-- Noice mini view
 	hi("NoiceMini", { ctermfg = colors.white, ctermbg = colors.br_black })

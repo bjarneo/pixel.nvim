@@ -35,43 +35,30 @@ function M.setup(colors)
 	hi("markdownStrike", { ctermfg = colors.white, cterm = "strikethrough" })
 	hi("markdownStrikeDelimiter", { ctermfg = colors.white, cterm = "strikethrough" })
 
-	-- Markdown code
-	hi("markdownCode", { ctermfg = colors.green })
-	hi("markdownCodeBlock", { ctermfg = colors.green })
-	hi("markdownCodeDelimiter", { ctermfg = colors.white })
-	hi("markdownCodeBlockDelimiter", { ctermfg = colors.white })
+-- Markdown code
+hi("markdownCode", { ctermfg = colors.green })
+hi("markdownCodeBlock", { ctermfg = colors.green })
+hi("markdownCodeDelimiter", { ctermfg = colors.white })
 
-	-- Markdown links
-	hi("markdownLink", { ctermfg = colors.br_green, cterm = "underline" })
-	hi("markdownLinkText", { ctermfg = colors.br_green, cterm = "underline" })
-	hi("markdownLinkDelimiter", { ctermfg = colors.white })
-	hi("markdownLinkTextDelimiter", { ctermfg = colors.white })
-	hi("markdownUrl", { ctermfg = colors.br_green, cterm = "underline" })
-	hi("markdownUrlDelimiter", { ctermfg = colors.white })
-	hi("markdownUrlTitle", { ctermfg = colors.green })
-	hi("markdownUrlTitleDelimiter", { ctermfg = colors.white })
-	hi("markdownAutomaticLink", { ctermfg = colors.br_green, cterm = "underline" })
-	hi("markdownId", { ctermfg = colors.cyan })
-	hi("markdownIdDelimiter", { ctermfg = colors.white })
-	hi("markdownIdDeclaration", { ctermfg = colors.cyan })
-	hi("markdownLinkReference", { ctermfg = colors.br_green })
+-- Markdown links
+hi("markdownLink", { ctermfg = colors.br_green, cterm = "underline" })
+hi("markdownLinkText", { ctermfg = colors.br_green, cterm = "underline" })
+hi("markdownUrl", { ctermfg = colors.br_green, cterm = "underline" })
+hi("markdownLinkDelimiter", { ctermfg = colors.white })
 
-	-- Markdown lists
-	hi("markdownListMarker", { ctermfg = colors.blue })
-	hi("markdownOrderedListMarker", { ctermfg = colors.blue })
-	hi("markdownRule", { ctermfg = colors.blue, cterm = "bold" })
-	hi("markdownCheckboxChecked", { ctermfg = colors.green, cterm = "bold" })
-	hi("markdownCheckboxUnchecked", { ctermfg = colors.br_black, cterm = "bold" })
+-- Markdown lists
+hi("markdownListMarker", { ctermfg = colors.blue })
+hi("markdownOrderedListMarker", { ctermfg = colors.blue })
+hi("markdownRule", { ctermfg = colors.blue, cterm = "bold" })
 
 	-- Markdown quotes
 	hi("markdownBlockquote", { ctermfg = colors.br_black, cterm = italic })
 	hi("markdownBlockquoteDelimiter", { ctermfg = colors.br_black, cterm = italic })
 
-	-- Markdown tables
-	hi("markdownTable", { ctermfg = colors.white })
-	hi("markdownTableDelimiter", { ctermfg = colors.white })
-	hi("markdownTableHead", { ctermfg = colors.blue, cterm = "bold" })
-	hi("markdownTableHeadDelimiter", { ctermfg = colors.white, cterm = "bold" })
+-- Markdown tables
+hi("markdownTable", { ctermfg = colors.white })
+hi("markdownTableHead", { ctermfg = colors.blue, cterm = "bold" })
+hi("markdownTableDelimiter", { ctermfg = colors.white })
 
 	-- Markdown escape sequences
 	hi("markdownEscape", { ctermfg = colors.br_cyan })

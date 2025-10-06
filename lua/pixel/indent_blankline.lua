@@ -27,10 +27,6 @@ function M.setup(colors)
 	hi("RainbowDelimiterViolet", { ctermfg = colors.red })
 	hi("RainbowDelimiterCyan", { ctermfg = colors.green })
 
-	-- Mini.indentscope (alternative plugin)
-	hi("MiniIndentscopeSymbol", { ctermfg = colors.br_blue })
-	hi("MiniIndentscopeSymbolOff", { ctermfg = colors.br_black })
-
 	-- Indent highlight groups for different nesting levels
 	hi("IndentLevel1", { ctermfg = colors.br_black })
 	hi("IndentLevel2", { ctermfg = colors.br_black })

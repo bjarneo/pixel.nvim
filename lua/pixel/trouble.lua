@@ -19,30 +19,23 @@ function M.setup(colors)
 	hi("TroubleTextError", { ctermfg = colors.br_red })
 	hi("TroubleTextHint", { ctermfg = colors.br_cyan })
 
-	-- Trouble signs
-	hi("TroubleSignError", { ctermfg = colors.br_red })
-	hi("TroubleSignWarning", { ctermfg = colors.br_yellow })
-	hi("TroubleSignInformation", { ctermfg = colors.br_blue })
-	hi("TroubleSignHint", { ctermfg = colors.br_cyan })
-	hi("TroubleSignOther", { ctermfg = colors.br_black })
+-- Trouble text
+hi("TroubleText", { ctermfg = colors.white })
+hi("TroubleTextError", { ctermfg = colors.br_red })
+hi("TroubleTextWarning", { ctermfg = colors.br_yellow })
+hi("TroubleTextInformation", { ctermfg = colors.br_blue })
+hi("TroubleTextHint", { ctermfg = colors.br_cyan })
 
-	-- Trouble counts
-	hi("TroubleCount", { ctermfg = colors.cyan, ctermbg = colors.br_black, cterm = "bold" })
-	hi("TroubleCountError", { ctermfg = colors.br_red, ctermbg = colors.br_black, cterm = "bold" })
-	hi("TroubleCountWarning", { ctermfg = colors.br_yellow, ctermbg = colors.br_black, cterm = "bold" })
-	hi("TroubleCountInformation", { ctermfg = colors.br_blue, ctermbg = colors.br_black, cterm = "bold" })
-	hi("TroubleCountHint", { ctermfg = colors.br_cyan, ctermbg = colors.br_black, cterm = "bold" })
+-- Trouble signs
+hi("TroubleSignError", { ctermfg = colors.br_red })
+hi("TroubleSignWarning", { ctermfg = colors.br_yellow })
+hi("TroubleSignInformation", { ctermfg = colors.br_blue })
+hi("TroubleSignHint", { ctermfg = colors.br_cyan })
 
-	-- Trouble location
-	hi("TroubleLocation", { ctermfg = colors.cyan })
-	hi("TroubleFile", { ctermfg = colors.green })
-	hi("TroubleDirectory", { ctermfg = colors.yellow })
-	hi("TroubleFilename", { ctermfg = colors.red })
-	hi("TroubleSource", { ctermfg = colors.br_black })
-	hi("TroubleCode", { ctermfg = colors.blue })
-	hi("TroubleLineNr", { ctermfg = colors.br_black })
-	hi("TroubleCol", { ctermfg = colors.br_black })
-	hi("TroubleLspKind", { ctermfg = colors.yellow })
+-- Trouble file/location
+hi("TroubleFile", { ctermfg = colors.cyan })
+hi("TroubleLocation", { ctermfg = colors.br_black })
+hi("TroubleCode", { ctermfg = colors.green })
 
 	-- Trouble folding
 	hi("TroubleFoldIcon", { ctermfg = colors.br_black })

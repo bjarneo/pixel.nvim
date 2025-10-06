@@ -142,8 +142,6 @@ function M.setup(opts)
 	require("pixel.telescope").setup(colors)
 	require("pixel.nvimtree").setup(colors)
 	require("pixel.neo_tree").setup(colors)
-
-	-- Load additional common plugin modules
 	require("pixel.gitsigns").setup(colors)
 	require("pixel.mason").setup(colors)
 	require("pixel.trouble").setup(colors)

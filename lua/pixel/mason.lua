@@ -15,24 +15,23 @@ function M.setup(colors)
 	hi("MasonHeader", { ctermfg = colors.red, ctermbg = colors.br_black, cterm = "bold" })
 	hi("MasonHeaderSecondary", { ctermfg = colors.cyan, ctermbg = colors.br_black, cterm = "bold" })
 
-	-- Mason highlight groups
-	hi("MasonHighlight", { ctermfg = colors.red })
-	hi("MasonHighlightBlock", { ctermfg = colors.black, ctermbg = colors.red })
-	hi("MasonHighlightBlockBold", { ctermfg = colors.black, ctermbg = colors.red, cterm = "bold" })
-	hi("MasonHighlightSecondary", { ctermfg = colors.cyan })
-	hi("MasonHighlightBlockSecondary", { ctermfg = colors.black, ctermbg = colors.cyan })
-	hi("MasonHighlightBlockBoldSecondary", { ctermfg = colors.black, ctermbg = colors.cyan, cterm = "bold" })
+-- Mason highlights (primary and secondary)
+hi("MasonHighlight", { ctermfg = colors.red })
+hi("MasonHighlightSecondary", { ctermfg = colors.cyan })
 
-	-- Mason muteds
-	hi("MasonMuted", { ctermfg = colors.br_black })
-	hi("MasonMutedBlock", { ctermfg = colors.br_black, ctermbg = colors.br_black })
-	hi("MasonMutedBlockBold", { ctermfg = colors.br_black, ctermbg = colors.br_black, cterm = "bold" })
+-- Mason diagnostic messages
+hi("MasonError", { ctermfg = colors.br_red })
+hi("MasonWarning", { ctermfg = colors.br_yellow })
+hi("MasonInfo", { ctermfg = colors.br_blue })
+hi("MasonMuted", { ctermfg = colors.br_black })
 
-	-- Mason links
-	hi("MasonLink", { ctermfg = colors.br_blue, cterm = "underline" })
+-- Mason package states (essential)
+hi("MasonPackageInstalled", { ctermfg = colors.br_blue })
+hi("MasonPackagePending", { ctermfg = colors.br_yellow })
+hi("MasonPackageUninstalled", { ctermfg = colors.br_red })
 
-	-- Mason error
-	hi("MasonError", { ctermfg = colors.br_red })
+-- Mason headings/titles
+hi("MasonHeading", { ctermfg = colors.red, cterm = "bold" })
 
 	-- Mason warning
 	hi("MasonWarning", { ctermfg = colors.br_yellow })
