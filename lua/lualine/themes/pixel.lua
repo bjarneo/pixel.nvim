@@ -5,7 +5,7 @@ local M = {}
 
 M.normal = {
 	a = { bg = colors.yellow, fg = colors.black, gui = "bold" },
-	b = { bg = colors.br_black, fg = colors.yellow },
+	b = { bg = colors.black, fg = colors.yellow },
 	c = {
 		bg = colors.black,
 		fg = colors.white,
@@ -18,22 +18,22 @@ M.normal = {
 
 M.insert = {
 	a = { bg = colors.green, fg = colors.black },
-	b = { bg = colors.br_black, fg = colors.green },
+	b = { bg = colors.black, fg = colors.green },
 }
 
 M.command = {
 	a = { bg = colors.yellow, fg = colors.black },
-	b = { bg = colors.br_black, fg = colors.yellow },
+	b = { bg = colors.black, fg = colors.yellow },
 }
 
 M.visual = {
 	a = { bg = colors.magenta, fg = colors.black },
-	b = { bg = colors.br_black, fg = colors.magenta },
+	b = { bg = colors.black, fg = colors.magenta },
 }
 
 M.replace = {
 	a = { bg = colors.red, fg = colors.black },
-	b = { bg = colors.br_black, fg = colors.red },
+	b = { bg = colors.black, fg = colors.red },
 }
 
 M.inactive = {
