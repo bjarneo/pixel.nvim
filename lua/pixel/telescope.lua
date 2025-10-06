@@ -9,9 +9,9 @@ local M = {}
 
 function M.setup(colors)
   -- Telescope general
-  hi("TelescopeSelection", { ctermfg = colors.white, ctermbg = colors.br_black })
-  hi("TelescopeSelectionCaret", { ctermfg = colors.white, ctermbg = colors.br_black })
-  hi("TelescopeMultiSelection", { ctermfg = colors.white, ctermbg = colors.br_black })
+  hi("TelescopeSelection", { ctermfg = colors.white, ctermbg = colors.black })
+  hi("TelescopeSelectionCaret", { ctermfg = colors.white, ctermbg = colors.black })
+  hi("TelescopeMultiSelection", { ctermfg = colors.white, ctermbg = colors.black })
   hi("TelescopeNormal", { ctermfg = colors.white, ctermbg = colors.black })
   hi("TelescopeBorder", { ctermfg = colors.br_black, ctermbg = colors.black })
   hi("TelescopeMatching", { ctermfg = colors.br_green, cterm = "bold" })
@@ -27,8 +27,8 @@ function M.setup(colors)
   hi("TelescopePreviewNormal", { ctermfg = colors.white, ctermbg = colors.black })
   hi("TelescopePreviewBorder", { ctermfg = colors.br_black, ctermbg = colors.black })
   hi("TelescopePreviewTitle", { ctermfg = colors.br_blue, cterm = "bold" })
-  hi("TelescopePreviewLine", { ctermbg = colors.br_black })
-  hi("TelescopePreviewMatch", { ctermfg = colors.br_green, ctermbg = colors.br_black })
+  hi("TelescopePreviewLine", { ctermbg = colors.black })
+  hi("TelescopePreviewMatch", { ctermfg = colors.br_green, ctermbg = colors.black })
 
   -- Telescope results
   hi("TelescopeResultsNormal", { ctermfg = colors.white, ctermbg = colors.black })

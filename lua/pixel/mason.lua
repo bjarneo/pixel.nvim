@@ -11,7 +11,7 @@ function M.setup(colors)
 	local italic = config.disable_italics and "NONE" or "italic"
 
 	-- Mason window
-	hi("MasonNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("MasonNormal", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("MasonHeader", { ctermfg = colors.red, ctermbg = colors.br_black, cterm = "bold" })
 	hi("MasonHeaderSecondary", { ctermfg = colors.cyan, ctermbg = colors.br_black, cterm = "bold" })
 

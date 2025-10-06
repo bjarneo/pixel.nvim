@@ -10,13 +10,11 @@ function M.setup(colors)
 	local italic = config.disable_italics and "NONE" or "italic"
 
 	-- Diffview panel
-	hi("DiffviewNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("DiffviewNormal", { ctermfg = colors.white })
 	hi("DiffviewCursorLine", { ctermbg = colors.br_black })
 	hi("DiffviewVertSplit", { ctermfg = colors.br_black })
-	hi("DiffviewSignColumn", { ctermbg = colors.black })
 	hi("DiffviewStatusLine", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("DiffviewStatusLineNC", { ctermfg = colors.br_black, ctermbg = colors.br_black })
-	hi("DiffviewEndOfBuffer", { ctermfg = colors.black })
 	hi("DiffviewFilePanelTitle", { ctermfg = colors.red, cterm = "bold" })
 	hi("DiffviewFilePanelCounter", { ctermfg = colors.cyan, cterm = "bold" })
 	hi("DiffviewFilePanelFileName", { ctermfg = colors.green })

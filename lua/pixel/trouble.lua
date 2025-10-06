@@ -11,8 +11,8 @@ function M.setup(colors)
 	local italic = config.disable_italics and "NONE" or "italic"
 
 	-- Trouble window
-	hi("TroubleNormal", { ctermfg = colors.white, ctermbg = colors.black })
-	hi("TroubleNormalNC", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("TroubleNormal", { ctermfg = colors.white })
+	hi("TroubleNormalNC", { ctermfg = colors.white })
 	hi("TroubleText", { ctermfg = colors.white })
 	hi("TroubleTextInformation", { ctermfg = colors.br_blue })
 	hi("TroubleTextWarning", { ctermfg = colors.br_yellow })
@@ -87,7 +87,7 @@ function M.setup(colors)
 	hi("TroubleDirname", { ctermfg = colors.yellow })
 
 	-- Trouble todo
-	hi("TroubleTodo", { ctermfg = colors.br_yellow, ctermbg = colors.black, cterm = "bold" })
+	hi("TroubleTodo", { ctermfg = colors.br_yellow, cterm = "bold" })
 
 	-- Trouble qflist
 	hi("TroubleQfListText", { ctermfg = colors.white })

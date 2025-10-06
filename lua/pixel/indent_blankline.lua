@@ -40,7 +40,7 @@ function M.setup(colors)
 	hi("IndentLevel6", { ctermfg = colors.br_black })
 
 	-- Context highlighting
-	hi("IndentContext", { ctermfg = colors.br_blue, ctermbg = colors.black })
+	hi("IndentContext", { ctermfg = colors.br_blue })
 	hi("IndentContextStart", { cterm = "underline" })
 	hi("IndentContextEnd", { cterm = "underline" })
 
@@ -50,8 +50,8 @@ function M.setup(colors)
 	hi("IndentScopeInactive", { ctermfg = colors.br_black })
 
 	-- Error highlighting
-	hi("IndentError", { ctermfg = colors.br_red, ctermbg = colors.black })
-	hi("IndentWarning", { ctermfg = colors.br_yellow, ctermbg = colors.black })
+	hi("IndentError", { ctermfg = colors.br_red })
+	hi("IndentWarning", { ctermfg = colors.br_yellow })
 
 	-- Custom bracket highlighting
 	hi("IndentBracket", { ctermfg = colors.white })

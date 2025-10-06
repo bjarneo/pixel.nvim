@@ -20,7 +20,7 @@ function M.setup(colors)
 	hi("SnacksNotificationHistory", { ctermfg = colors.white, ctermbg = colors.br_black })
 
 	-- Snacks dashboard
-	hi("SnacksDashboardNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("SnacksDashboardNormal", { ctermfg = colors.white })
 	hi("SnacksDashboardDesc", { ctermfg = colors.br_black })
 	hi("SnacksDashboardFile", { ctermfg = colors.green })
 	hi("SnacksDashboardDir", { ctermfg = colors.yellow })
@@ -45,12 +45,12 @@ function M.setup(colors)
 	hi("SnacksInputPrompt", { ctermfg = colors.blue })
 
 	-- Snacks lazygit
-	hi("SnacksLazygitNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("SnacksLazygitNormal", { ctermfg = colors.white })
 	hi("SnacksLazygitBorder", { ctermfg = colors.br_black })
 	hi("SnacksLazygitTitle", { ctermfg = colors.red, cterm = "bold" })
 
 	-- Snacks picker
-	hi("SnacksPickerNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("SnacksPickerNormal", { ctermfg = colors.white })
 	hi("SnacksPickerBorder", { ctermfg = colors.br_black })
 	hi("SnacksPickerTitle", { ctermfg = colors.red, cterm = "bold" })
 	hi("SnacksPickerIcon", { ctermfg = colors.red })
@@ -70,14 +70,14 @@ function M.setup(colors)
 	hi("SnacksRenameIcon", { ctermfg = colors.red })
 
 	-- Snacks scratch
-	hi("SnacksScratchNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("SnacksScratchNormal", { ctermfg = colors.white })
 	hi("SnacksScratchBorder", { ctermfg = colors.br_black })
 	hi("SnacksScratchTitle", { ctermfg = colors.red, cterm = "bold" })
 	hi("SnacksScratchIcon", { ctermfg = colors.red })
 	hi("SnacksScratchFooter", { ctermfg = colors.br_black })
 
 	-- Snacks terminal
-	hi("SnacksTerminalNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("SnacksTerminalNormal", { ctermfg = colors.white })
 	hi("SnacksTerminalBorder", { ctermfg = colors.br_black })
 	hi("SnacksTerminalTitle", { ctermfg = colors.red, cterm = "bold" })
 	hi("SnacksTerminalIcon", { ctermfg = colors.red })
@@ -92,14 +92,14 @@ function M.setup(colors)
 	hi("SnacksToggleDisabled", { ctermfg = colors.br_black })
 
 	-- Snacks win
-	hi("SnacksWinNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("SnacksWinNormal", { ctermfg = colors.white })
 	hi("SnacksWinBorder", { ctermfg = colors.br_black })
 	hi("SnacksWinTitle", { ctermfg = colors.red, cterm = "bold" })
 	hi("SnacksWinIcon", { ctermfg = colors.red })
 	hi("SnacksWinFooter", { ctermfg = colors.br_black })
 
 	-- Snacks zen
-	hi("SnacksZenNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("SnacksZenNormal", { ctermfg = colors.white })
 	hi("SnacksZenBorder", { ctermfg = colors.br_black })
 	hi("SnacksZenTitle", { ctermfg = colors.red, cterm = "bold" })
 	hi("SnacksZenIcon", { ctermfg = colors.red })

@@ -42,7 +42,7 @@ function M.setup(opts)
 	vim.opt.termguicolors = false
 
 	-- Basic highlight groups - using only ANSI terminal colors
-	hi("Normal", { ctermfg = colors.white })
+	hi("Normal", { ctermfg = colors.white, ctermbg = colors.black })
 	hi("Cursor", { ctermfg = colors.black, ctermbg = colors.white })
 	hi("CursorLine", { ctermbg = colors.br_black })
 	hi("CursorColumn", { ctermbg = colors.br_black })
@@ -126,6 +126,11 @@ function M.setup(opts)
 	hi("SpellCap", { ctermfg = colors.blue, cterm = "underline" })
 	hi("SpellLocal", { ctermfg = colors.cyan, cterm = "underline" })
 	hi("SpellRare", { ctermfg = colors.magenta, cterm = "underline" })
+
+	-- Floating windows
+	hi("NormalFloat", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("FloatBorder", { ctermfg = colors.br_black, ctermbg = colors.black })
+	hi("FloatTitle", { ctermfg = colors.blue, ctermbg = colors.black, cterm = "bold" })
 
 	-- File explorer and tree colors
 	hi("Directory", { ctermfg = colors.blue, cterm = "bold" })

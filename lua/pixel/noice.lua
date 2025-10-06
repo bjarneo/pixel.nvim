@@ -34,11 +34,11 @@ function M.setup(colors)
 	hi("NoiceLspProgressTitle", { ctermfg = colors.white })
 
 	-- Noice messages
-	hi("NoiceMessage", { ctermfg = colors.white, ctermbg = colors.black })
-	hi("NoiceMessageConfirm", { ctermfg = colors.br_blue, ctermbg = colors.black })
-	hi("NoiceMessageError", { ctermfg = colors.br_red, ctermbg = colors.black })
-	hi("NoiceMessageInfo", { ctermfg = colors.br_blue, ctermbg = colors.black })
-	hi("NoiceMessageWarn", { ctermfg = colors.br_yellow, ctermbg = colors.black })
+	hi("NoiceMessage", { ctermfg = colors.white })
+	hi("NoiceMessageConfirm", { ctermfg = colors.br_blue })
+	hi("NoiceMessageError", { ctermfg = colors.br_red })
+	hi("NoiceMessageInfo", { ctermfg = colors.br_blue })
+	hi("NoiceMessageWarn", { ctermfg = colors.br_yellow })
 
 	-- Noice popup menu
 	hi("NoicePopupmenu", { ctermfg = colors.white, ctermbg = colors.br_black })
@@ -57,7 +57,7 @@ function M.setup(colors)
 	hi("NoiceMiniButtonSelected", { ctermfg = colors.blue, ctermbg = colors.br_black })
 
 	-- Noice split view
-	hi("NoiceSplit", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("NoiceSplit", { ctermfg = colors.white })
 	hi("NoiceSplitBorder", { ctermfg = colors.br_black })
 
 	-- Noice virtual text

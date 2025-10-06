@@ -16,12 +16,12 @@ function M.setup(colors)
 	hi("WhichKeyDesc", { ctermfg = colors.br_blue })
 	hi("WhichKeySeperator", { ctermfg = colors.br_black })
 	hi("WhichKeySeparator", { ctermfg = colors.br_black })
-	hi("WhichKeyFloat", { ctermbg = colors.black })
+	hi("WhichKeyFloat", { ctermbg = colors.br_black })
 	hi("WhichKeyValue", { ctermfg = colors.green })
-	hi("WhichKeyBorder", { ctermfg = colors.br_black })
+	hi("WhichKeyBorder", { ctermfg = colors.br_black, ctermbg = colors.br_black })
 
 	-- WhichKey specific key types
-	hi("WhichKeyNormal", { ctermfg = colors.white, ctermbg = colors.black })
+	hi("WhichKeyNormal", { ctermfg = colors.white, ctermbg = colors.br_black })
 	hi("WhichKeyTitle", { ctermfg = colors.blue, cterm = "bold" })
 	hi("WhichKeyIcon", { ctermfg = colors.cyan })
 	hi("WhichKeyIconAzure", { ctermfg = colors.br_blue })
@@ -35,8 +35,8 @@ function M.setup(colors)
 	hi("WhichKeyIconYellow", { ctermfg = colors.br_yellow })
 
 	-- WhichKey buffer/window
-	hi("WhichKeyBg", { ctermbg = colors.black })
-	hi("WhichKeyBorder", { ctermfg = colors.br_black, ctermbg = colors.black })
+	hi("WhichKeyBg", { ctermbg = colors.br_black })
+	hi("WhichKeyBorder", { ctermfg = colors.br_black, ctermbg = colors.br_black })
 
 	-- WhichKey modes
 	hi("WhichKeyNormalMode", { ctermfg = colors.br_blue, cterm = "bold" })

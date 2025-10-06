@@ -18,25 +18,25 @@ function M.setup(colors)
 	hi("GitSignsUntracked", { ctermfg = colors.green })
 
 	-- GitSigns line highlights
-	hi("GitSignsAddLn", { ctermfg = colors.green, ctermbg = colors.black })
-	hi("GitSignsChangeLn", { ctermfg = colors.yellow, ctermbg = colors.black })
-	hi("GitSignsDeleteLn", { ctermfg = colors.red, ctermbg = colors.black })
-	hi("GitSignsTopdeleteN", { ctermfg = colors.red, ctermbg = colors.black })
-	hi("GitSignsChangedeleteLn", { ctermfg = colors.yellow, ctermbg = colors.black })
-	hi("GitSignsUntrackedLn", { ctermfg = colors.green, ctermbg = colors.black })
+	hi("GitSignsAddLn", { ctermfg = colors.green })
+	hi("GitSignsChangeLn", { ctermfg = colors.yellow })
+	hi("GitSignsDeleteLn", { ctermfg = colors.red })
+	hi("GitSignsTopdeleteN", { ctermfg = colors.red })
+	hi("GitSignsChangedeleteLn", { ctermfg = colors.yellow })
+	hi("GitSignsUntrackedLn", { ctermfg = colors.green })
 
 	-- GitSigns number highlights
-	hi("GitSignsAddNr", { ctermfg = colors.green, ctermbg = colors.black })
-	hi("GitSignsChangeNr", { ctermfg = colors.yellow, ctermbg = colors.black })
-	hi("GitSignsDeleteNr", { ctermfg = colors.red, ctermbg = colors.black })
-	hi("GitSignsTopdeleteNr", { ctermfg = colors.red, ctermbg = colors.black })
-	hi("GitSignsChangedeleteNr", { ctermfg = colors.yellow, ctermbg = colors.black })
-	hi("GitSignsUntrackedNr", { ctermfg = colors.green, ctermbg = colors.black })
+	hi("GitSignsAddNr", { ctermfg = colors.green })
+	hi("GitSignsChangeNr", { ctermfg = colors.yellow })
+	hi("GitSignsDeleteNr", { ctermfg = colors.red })
+	hi("GitSignsTopdeleteNr", { ctermfg = colors.red })
+	hi("GitSignsChangedeleteNr", { ctermfg = colors.yellow })
+	hi("GitSignsUntrackedNr", { ctermfg = colors.green })
 
 	-- GitSigns preview
-	hi("GitSignsAddPreview", { ctermfg = colors.green, ctermbg = colors.br_black })
-	hi("GitSignsDeletePreview", { ctermfg = colors.red, ctermbg = colors.br_black })
-	hi("GitSignsChangePreview", { ctermfg = colors.yellow, ctermbg = colors.br_black })
+	hi("GitSignsAddPreview", { ctermfg = colors.green, ctermbg = colors.black })
+	hi("GitSignsDeletePreview", { ctermfg = colors.red, ctermbg = colors.black })
+	hi("GitSignsChangePreview", { ctermfg = colors.yellow, ctermbg = colors.black })
 
 	-- GitSigns current line blame
 	hi("GitSignsCurrentLineBlame", { ctermfg = colors.br_black, ctermbg = colors.black, cterm = italic })
@@ -47,9 +47,9 @@ function M.setup(colors)
 	hi("GitSignsDeleteWord", { ctermfg = colors.black, ctermbg = colors.red })
 
 	-- GitSigns virtual text
-	hi("GitSignsAddVirtLn", { ctermfg = colors.green, ctermbg = colors.black })
-	hi("GitSignsChangeVirtLn", { ctermfg = colors.yellow, ctermbg = colors.black })
-	hi("GitSignsDeleteVirtLn", { ctermfg = colors.red, ctermbg = colors.black })
+	hi("GitSignsAddVirtLn", { ctermfg = colors.green })
+	hi("GitSignsChangeVirtLn", { ctermfg = colors.yellow })
+	hi("GitSignsDeleteVirtLn", { ctermfg = colors.red })
 
 	-- GitSigns inline highlights
 	hi("GitSignsAddInline", { ctermfg = colors.black, ctermbg = colors.green })
@@ -57,15 +57,15 @@ function M.setup(colors)
 	hi("GitSignsDeleteInline", { ctermfg = colors.black, ctermbg = colors.red })
 
 	-- GitSigns staging area
-	hi("GitSignsAddStaged", { ctermfg = colors.green, ctermbg = colors.br_black })
-	hi("GitSignsChangeStaged", { ctermfg = colors.yellow, ctermbg = colors.br_black })
-	hi("GitSignsDeleteStaged", { ctermfg = colors.red, ctermbg = colors.br_black })
+	hi("GitSignsAddStaged", { ctermfg = colors.green, ctermbg = colors.black })
+	hi("GitSignsChangeStaged", { ctermfg = colors.yellow, ctermbg = colors.black })
+	hi("GitSignsDeleteStaged", { ctermfg = colors.red, ctermbg = colors.black })
 
 	-- GitSigns diff
-	hi("GitSignsDiffAdd", { ctermfg = colors.green, ctermbg = colors.black })
-	hi("GitSignsDiffChange", { ctermfg = colors.yellow, ctermbg = colors.black })
-	hi("GitSignsDiffDelete", { ctermfg = colors.red, ctermbg = colors.black })
-	hi("GitSignsDiffText", { ctermfg = colors.yellow, ctermbg = colors.br_black })
+	hi("GitSignsDiffAdd", { ctermfg = colors.green })
+	hi("GitSignsDiffChange", { ctermfg = colors.yellow })
+	hi("GitSignsDiffDelete", { ctermfg = colors.red })
+	hi("GitSignsDiffText", { ctermfg = colors.yellow, ctermbg = colors.black })
 
 	-- GitSigns blame
 	hi("GitSignsBlame", { ctermfg = colors.br_black, cterm = italic })
@@ -75,12 +75,9 @@ function M.setup(colors)
 	hi("GitSignsBlameSummary", { ctermfg = colors.white })
 
 	-- GitSigns merge conflicts
-	hi("GitSignsConflictOurs", { ctermfg = colors.br_blue, ctermbg = colors.black })
-	hi("GitSignsConflictTheirs", { ctermfg = colors.red, ctermbg = colors.black })
-	hi("GitSignsConflictAncestor", { ctermfg = colors.br_yellow, ctermbg = colors.black })
-
-	-- GitSigns signs in sign column
-	hi("GitSignsSignColumn", { ctermbg = colors.black })
+	hi("GitSignsConflictOurs", { ctermfg = colors.br_blue })
+	hi("GitSignsConflictTheirs", { ctermfg = colors.red })
+	hi("GitSignsConflictAncestor", { ctermfg = colors.br_yellow })
 end
 
 return M
